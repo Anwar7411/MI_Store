@@ -115,11 +115,6 @@ const Signup = () => {
       </Button>
       </ThemeProvider>
       </div>
-      <div style={{display:"flex",gap:"40px"}}>
-      <div><p style={{width:"150px",color:"#e3641d",margin:"10px",fontSize:"18px"}}>Forget Password ?</p></div>
-      <p style={{color:"#e3641d",marginTop:"10px",fontSize:"18px"}}>Signin with your Phone Number</p>
-      </div>
-      
     </Box>
   )
 }

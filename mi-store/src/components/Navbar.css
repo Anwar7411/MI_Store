@@ -1,5 +1,4 @@
 .navbar{
-   position: sticky;
     display: flex;
     background-color: #212121 ;
     margin: auto;
@@ -22,9 +21,11 @@
  }
 .navseconddiv>p:hover{
     color: white;
+    cursor: pointer;
  }
  .navfirstdiv>p:hover{
     color: white;
+    cursor: pointer;
  }
 
  .footer{

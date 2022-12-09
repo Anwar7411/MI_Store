@@ -4,6 +4,7 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import "./SecondNav.css"
 
+
 const Second_Nav = () => {
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
@@ -49,7 +50,7 @@ const Second_Nav = () => {
   return (
     <div className='secondNav'>
         <div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/225px-Xiaomi_logo_%282021-%29.svg.png"/>
+           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/225px-Xiaomi_logo_%282021-%29.svg.png"/>
         <p>Xiaomi Phones</p>
         <p>Redmi Phones</p>
         <p>TV</p>

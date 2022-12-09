@@ -4,6 +4,7 @@ import Carousel_home from '../components/Carousel_home';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import Second_Nav from '../components/Second_Nav';
 
+
 const Home = () => {
 
 const secondCarousel=["https://i02.appmifile.com/500_operator_in/23/02/2022/7dd77194a09db35f46aa82541d30a6f2.jpg","https://i02.appmifile.com/794_operator_in/23/02/2022/29f71b53b9eeba2c95f4ca2ca39b48f8.jpg",

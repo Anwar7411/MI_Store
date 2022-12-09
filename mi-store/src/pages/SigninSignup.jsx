@@ -4,7 +4,8 @@ import Divider from '@mui/material/Divider';
 import { useState } from 'react';
 import Signin from '../components/Signin';
 import Signup from '../components/Signup';
-import { borderRadius } from '@mui/system';
+import { Link } from 'react-router-dom';
+
 const SigninSignup = () => {
   const [signinstate,setSigninstate]=useState("signin")
   const [signinactive,setsigninActive]=useState(true)
@@ -39,7 +40,7 @@ const SigninSignup = () => {
       <div >
         <div className='signinseconddiv'>
           <div>
-          <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/225px-Xiaomi_logo_%282021-%29.svg.png' />
+          <Link to="/"><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/225px-Xiaomi_logo_%282021-%29.svg.png' /></Link> 
           <h3>Xiaomi Account</h3>
           </div>
          
