@@ -21,6 +21,13 @@
                          'first fourth fourth';
     
 }
+
+.second_Nav{
+    position: absolute;
+    margin-top: 20px;
+    z-index: 100;
+    }
+
 .reviewflexdiv{
     display: flex;
     gap: 20px;

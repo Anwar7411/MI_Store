@@ -1,14 +1,10 @@
 .navbar{
+   position: sticky;
     display: flex;
     background-color: #212121 ;
     margin: auto;
     height: 35px;
     justify-content: space-between;
-}
-.second_Nav{
-position: absolute;
-margin-top: 20px;
-z-index: 100;
 }
 .navfirstdiv{
     display: flex;

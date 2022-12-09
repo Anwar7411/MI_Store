@@ -1,10 +1,21 @@
 import AllRoutes from "./pages/AllRoutes";
+import Navbar from "./components/Navbar";
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div>
-      <AllRoutes />
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <AllRoutes />
+      </div>
+      <div>
+         <Footer />
+      </div>
     </div>
+
   );
 }
 
