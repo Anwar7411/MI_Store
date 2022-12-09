@@ -1,0 +1,55 @@
+.maingrid{
+    width:85%;
+    margin: auto;
+    margin-top: 50px;
+}
+.maingrid>p{
+    font-size: 25px;
+    text-align: center;
+    color: #7e6961 ;
+    margin-bottom: 30px;
+}
+.item1 { grid-area: first;}
+.item2 { grid-area: second;}
+.item3 { grid-area: third;}
+.item4 { grid-area: fourth;width: 640px;height: 290px;}
+
+.homegrid{
+    
+    display: grid;
+    grid-template-areas: 'first second third'
+                         'first fourth fourth';
+    
+}
+.reviewflexdiv{
+    display: flex;
+    gap: 20px;
+}
+.reviewlowerdiv{
+width: 90%;
+display: flex;
+gap: 50px;
+margin: auto;
+}
+.reviewlowerdiv>p:nth-child(2){
+    color: #ff6e17;
+    font-weight: 700;
+}
+
+.reviewflexdivp{
+    margin-left: 35px;
+    margin-top: 10px;
+    font-size: 20px;
+
+}
+
+.lastcarousel{
+    margin-top: 50px;
+}
+
+.lastcarousel>p{
+    font-size: 25px;
+    text-align: center;
+    color: #7e6961 ;
+    margin-bottom: 30px;
+}

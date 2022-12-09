@@ -1,0 +1,50 @@
+.navbar{
+    display: flex;
+    background-color: #212121 ;
+    margin: auto;
+    height: 35px;
+    justify-content: space-between;
+}
+.second_Nav{
+position: absolute;
+margin-top: 20px;
+z-index: 100;
+}
+.navfirstdiv{
+    display: flex;
+    gap: 30px;
+    margin-left: 120px;
+    color: #9ea297;
+    font-size: 12px;
+}
+ .navseconddiv{
+    display: flex;
+    gap: 30px;
+    margin-right: 200px;
+    color: #9ea297;
+    font-size: 12px;
+ }
+.navseconddiv>p:hover{
+    color: white;
+ }
+ .navfirstdiv>p:hover{
+    color: white;
+ }
+
+ .footer{
+    display: flex;
+    background-color: #212121;
+    gap: 80px;
+    margin: auto;
+    margin-top: 15px;
+ }
+ .footer p{
+    color: #acaeac;
+ }
+ .footer>div{
+    margin-top: 50px;
+    margin-bottom: 120px;
+ }
+ .footer>div:nth-child(1){
+    margin-left: 120px;
+ }
