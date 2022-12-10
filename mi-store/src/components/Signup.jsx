@@ -6,13 +6,14 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const Signup = () => {
   const [values, setValues] = React.useState({
-    name:'',
+    name: '',
     Email: '',
     password: '',
-    confirmPassword:'',
+    confirmPassword: '',
     showPassword: false,
+    showConfirmpassword: false
   });
-
+  console.log(values)
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
   };
@@ -23,11 +24,20 @@ const Signup = () => {
       showPassword: !values.showPassword,
     });
   };
+  const handleClickShowConfirmPassword = () => {
+    setValues({
+      ...values,
+      showConfirmpassword: !values.showConfirmpassword,
+    });
+  };
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+  const handleMouseDownConfirmPassword = (event) => {
+    event.preventDefault();
+  };
   const theme = createTheme({
-    
+
     palette: {
       primary: {
         main: '#e3641d',
@@ -35,39 +45,41 @@ const Signup = () => {
     },
   });
 
-  
+
   return (
     <Box component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch'},
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
       }}
       noValidate
       autoComplete="off">
-      
+
       <div>
-      <TextField
+        <TextField
           required
           type="text"
           id="outlined-required"
           label="Full Name"
-          Value={values.name}
-          style={{width:"400px",backgroundColor:"#2d2d2d"}}
-          inputProps={{ style: { color: "white",height:"30px",fontSize:"20px" } }}
+          value={values.name}
+          onChange={handleChange('name')}
+          style={{ width: "400px", backgroundColor: "#2d2d2d" }}
+          inputProps={{ style: { color: "white", height: "30px", fontSize: "20px" } }}
         /><br />
-      <TextField
+        <TextField
           required
           type="email"
           id="outlined-required"
           label="Email"
-          Value={values.Email}
-          style={{width:"400px",backgroundColor:"#2d2d2d"}}
-          inputProps={{ style: { color: "white",height:"30px",fontSize:"20px" } }}
+          value={values.Email}
+          onChange={handleChange('Email')}
+          style={{ width: "400px", backgroundColor: "#2d2d2d" }}
+          inputProps={{ style: { color: "white", height: "30px", fontSize: "20px" } }}
         /><br />
-        <FormControl sx={{ m: 1, width: '400px',backgroundColor:"#2d2d2d",}} variant="outlined">
+        <FormControl sx={{ m: 1, width: '400px', backgroundColor: "#2d2d2d", }} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
-            inputProps={{ style: { color: "white",height:"30px",fontSize:"20px" } }}
+            inputProps={{ style: { color: "white", height: "30px", fontSize: "20px" } }}
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}
             onChange={handleChange('password')}
@@ -86,23 +98,23 @@ const Signup = () => {
             label="Password"
           />
         </FormControl>
-        <FormControl sx={{ m: 1, width: '400px',backgroundColor:"#2d2d2d",}} variant="outlined">
+        <FormControl sx={{ m: 1, width: '400px', backgroundColor: "#2d2d2d", }} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Confirm Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
-            inputProps={{ style: { color: "white",height:"30px",fontSize:"20px" } }}
-            type={values.showPassword ? 'text' : 'password'}
+            inputProps={{ style: { color: "white", height: "30px", fontSize: "20px" } }}
+            type={values.showConfirmpassword ? 'text' : 'password'}
             value={values.confirmPassword}
-            onChange={handleChange('password')}
+            onChange={handleChange('confirmPassword')}
             endAdornment={
               <InputAdornment position="end">
                 <IconButton
                   aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
+                  onClick={handleClickShowConfirmPassword}
+                  onMouseDown={handleMouseDownConfirmPassword}
                   edge="end"
                 >
-                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                  {values.showConfirmpassword ? <VisibilityOff /> : <Visibility />}
                 </IconButton>
               </InputAdornment>
             }
@@ -110,10 +122,10 @@ const Signup = () => {
           />
         </FormControl>
         <ThemeProvider theme={theme}>
-        <Button variant="contained" color="primary" style={{width:"400px",height:"50px",margin:"10px 10px",fontSize:"20px"}}>
-        Sign Up
-      </Button>
-      </ThemeProvider>
+          <Button variant="contained" color="primary" style={{ width: "400px", height: "50px", margin: "10px 10px", fontSize: "20px" }}>
+            Sign Up
+          </Button>
+        </ThemeProvider>
       </div>
     </Box>
   )

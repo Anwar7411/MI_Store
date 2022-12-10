@@ -15,7 +15,7 @@ const Signin = () => {
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
   };
-
+  console.log(values)
   const handleClickShowPassword = () => {
     setValues({
       ...values,
@@ -26,7 +26,7 @@ const Signin = () => {
     event.preventDefault();
   };
   const theme = createTheme({
-    
+
     palette: {
       primary: {
         main: '#e3641d',
@@ -37,26 +37,27 @@ const Signin = () => {
   return (
     <Box component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch'},
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
       }}
       noValidate
       autoComplete="off">
-      
+
       <div>
-      <TextField
+        <TextField
           required
           type="email"
           id="outlined-required"
           label="Email"
-          Value={values.Email}
-          style={{width:"400px",backgroundColor:"#2d2d2d"}}
-          inputProps={{ style: { color: "white",height:"30px",fontSize:"20px" } }}
+          value={values.Email}
+          onChange={handleChange('Email')}
+          style={{ width: "400px", backgroundColor: "#2d2d2d" }}
+          inputProps={{ style: { color: "white", height: "30px", fontSize: "20px" } }}
         /><br />
-        <FormControl sx={{ m: 1, width: '400px',backgroundColor:"#2d2d2d",}} variant="outlined">
+        <FormControl sx={{ m: 1, width: '400px', backgroundColor: "#2d2d2d", }} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
-            inputProps={{ style: { color: "white",height:"30px",fontSize:"20px" } }}
+            inputProps={{ style: { color: "white", height: "30px", fontSize: "20px" } }}
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}
             onChange={handleChange('password')}
@@ -76,16 +77,16 @@ const Signin = () => {
           />
         </FormControl>
         <ThemeProvider theme={theme}>
-        <Button variant="contained" color="primary" style={{width:"400px",height:"50px",margin:"10px 10px",fontSize:"20px"}}>
-        Sign in
-      </Button>
-      </ThemeProvider>
+          <Button variant="contained" color="primary" style={{ width: "400px", height: "50px", margin: "10px 10px", fontSize: "20px" }}>
+            Sign in
+          </Button>
+        </ThemeProvider>
       </div>
-      <div style={{display:"flex",gap:"40px"}}>
-      <div><p style={{width:"150px",color:"#e3641d",margin:"10px",fontSize:"18px"}}>Forget Password ?</p></div>
-      <p style={{color:"#e3641d",marginTop:"10px",fontSize:"18px"}}>Signin with your Phone Number</p>
+      <div style={{ display: "flex", gap: "40px" }}>
+        <div><p style={{ width: "150px", color: "#e3641d", margin: "10px", fontSize: "18px" }}>Forget Password ?</p></div>
+        <p style={{ color: "#e3641d", marginTop: "10px", fontSize: "18px" }}>Signin with your Phone Number</p>
       </div>
-      
+
     </Box>
   )
 }
