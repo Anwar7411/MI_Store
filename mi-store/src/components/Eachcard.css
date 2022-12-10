@@ -1,0 +1,54 @@
+.eachcarddiv{
+        background: #fff;
+        text-align: center;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.eachcarddiv h5{
+    margin-top: 40px;
+}
+.eachcarddiv img{
+    width: 250px;
+    height: 250px;
+}
+
+.eachcardfirstdiv{
+    display: flex;
+    gap: 10px;
+    margin-left: 100px;
+}
+
+.eachcardfirstdiv>p:nth-child(1){
+    color: #e3641d;
+}
+
+.eachcardfirstdiv>p:nth-child(2){
+    color: #a6a9b0 ;
+}
+.eachcardseconddiv{
+    display: flex;
+    gap: 10px;
+    margin-left: 60px;
+    margin-top: 18px;
+}
+.eachcardseconddiv button{
+width: 120px;
+border-radius: 8px;
+
+}
+.eachcardseconddiv>button:nth-child(1){
+    color: white;
+    background-color: #191919 ;
+}
+
+.eachcardthirddiv{
+    display: flex;
+    gap: 15px;
+    margin-left: 100px;
+}
+.eachcardthirddiv>p:nth-child(2){
+    color: #a6a9b0 ;
+}
+.eachcardthirddiv p{
+    font-size: 13px;
+}

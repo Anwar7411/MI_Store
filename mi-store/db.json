@@ -1,0 +1,89 @@
+{
+    "phones":[
+        {
+            "category":"phone",
+            "brand":"xiaomi",
+            "title":"Xiaomi 11 Lite NE 5G",
+            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1632833370.2214110.png",
+            "color":"Jazz Blue",
+            "price":26999,
+            "strike_off":31999,
+            "storage":"128GB"
+        },
+        {
+            "category":"phone",
+            "brand":"xiaomi",
+            "title":"Xiaomi 12 Pro 5G",
+            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1650980960.19661951.jpg",
+            "color":"Opera Mauve",
+            "price":59999,
+            "strike_off":84999,
+            "storage":"256GB"
+        },
+        {
+            "category":"phone",
+            "brand":"xiaomi",
+            "title":"Mi 11X 5G",
+            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1588906276.48578306.png",
+            "color":"Green",
+            "price":29999,
+            "strike_off":34999,
+            "storage":"128GB"
+        },
+        {
+            "category":"phone",
+            "brand":"xiaomi",
+            "title":"Xiaomi 11i 5G",
+            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1641441345.76175946.png",
+            "color":"Green",
+            "price":26999,
+            "strike_off":31999,
+            "storage":"128GB"
+        },
+        {
+            "category":"phone",
+            "brand":"xiaomi",
+            "title":"Mi 11X Pro 5G",
+            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1619082947.53189274.png",
+            "color":"Green",
+            "price":31999,
+            "strike_off":49999,
+            "storage":"256GB"
+        },
+        {
+            "category":"phone",
+            "brand":"xiaomi",
+            "title":"Mi 11 Lite",
+            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1623672151.94276893.jpg",
+            "color":"Vinyl black",
+            "price":17999,
+            "strike_off":25999,
+            "storage":"128GB"
+        },
+        {
+            "category":"phone",
+            "brand":"xiaomi",
+            "title":"Mi 10T Pro",
+            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1607070559.82223168.png",
+            "color":"Vinyl black",
+            "price":24999,
+            "strike_off":47999,
+            "storage":"128GB"
+        }
+        
+    ],
+
+
+    "tv":[
+        {
+            "category":"tv",
+            "image":"",
+            "color":"",
+            "title":"",
+            "price":"",
+            "strike_off":"",
+            "storage":"",
+            "desc":"" 
+        }
+    ]
+}

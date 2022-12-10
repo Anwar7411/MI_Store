@@ -1,11 +1,12 @@
 import AllRoutes from "./pages/AllRoutes";
 import Navbar from "./components/Navbar";
 import Footer from './components/Footer';
+import AllProducts from "./components/AllProducts";
 
 function App() {
   return (
     <div>
-      <div>
+      {/* <div>
         <Navbar />
       </div>
       <div>
@@ -13,7 +14,9 @@ function App() {
       </div>
       <div>
          <Footer />
-      </div>
+      </div> */}
+
+       <AllProducts />
     </div>
 
   );
