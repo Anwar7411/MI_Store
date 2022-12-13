@@ -50,18 +50,16 @@ const Second_Nav = () => {
   return (
     <div className='secondNav'>
       <div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/225px-Xiaomi_logo_%282021-%29.svg.png" />
-        <p>Xiaomi Phones</p>
-        <p>Redmi Phones</p>
+        <img className='firstimg' src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/225px-Xiaomi_logo_%282021-%29.svg.png" />
+        <p>Phones</p>
         <p>TV</p>
         <p>Laptops & Tablets</p>
         <p>Accessories</p>
-        <p>Home</p>
-        <p>Audio</p>
+        <p>Life Styles</p>
       </div>
 
       <div>
-        <Search>
+        <Search sx={{border:"1px solid black"}}>
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>
