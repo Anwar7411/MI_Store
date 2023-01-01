@@ -13,7 +13,7 @@ const secondCarousel=["https://i02.appmifile.com/500_operator_in/23/02/2022/7dd7
     "https://i02.appmifile.com/57_operator_in/01/02/2022/eb24c958c37f58076921f5b94637a4d3.jpg","https://i02.appmifile.com/629_operator_in/01/02/2022/50f678d4f9eab8235ecc51ca730e9eac.jpg",
    ]  
    
-const firstCarousel=["https://i02.appmifile.com/185_operator_in/24/11/2022/f939b57b5e415094c4ad2db32f6cabba.jpg","https://i02.appmifile.com/439_operator_in/25/11/2022/ef10a21513490e5e09571cff35d72ff4.gif",
+const firstCarousel=["https://i02.appmifile.com/439_operator_in/25/11/2022/ef10a21513490e5e09571cff35d72ff4.gif","https://i02.appmifile.com/185_operator_in/24/11/2022/f939b57b5e415094c4ad2db32f6cabba.jpg",
    "https://i02.appmifile.com/913_operator_in/25/11/2022/7a41a0c7c6cdfac17805e973668976a9.jpg","https://i02.appmifile.com/973_operator_in/25/11/2022/6ac8d2fb91248eb8e98814aff36813e9.jpg",
    "https://i02.appmifile.com/806_operator_in/25/11/2022/b447c019fb393fd10663a69bf9368f2c.jpg","https://i02.appmifile.com/296_operator_in/25/11/2022/78a9b959ce5ba2015dd82af7abdca14a.jpg"
    ]      

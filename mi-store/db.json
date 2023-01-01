@@ -1,77 +1,457 @@
 {
     "phones":[
+      {
+        "category":"phone",
+        "brand":"xiaomi",
+        "title":"Xiaomi 11 Lite NE 5G",
+        "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1632833370.2214110.png",
+        "price":26999,
+        "strike_off":31999,
+        "storage":"6GB+128GB"
+    },
+    {
+        "category":"phone",
+        "brand":"xiaomi",
+        "title":"Xiaomi 12 Pro 5G",
+        "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1650980960.19661951.jpg",
+        "price":59999,
+        "strike_off":84999,
+        "storage":"8GB+256GB"
+    },
+    {
+        "category":"phone",
+        "brand":"xiaomi",
+        "title":"Mi 11X 5G",
+        "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1588906276.48578306.png",
+        "price":29999,
+        "strike_off":34999,
+        "storage":"6GB+128GB"
+    },
+    {
+        "category":"phone",
+        "brand":"xiaomi",
+        "title":"Xiaomi 11i 5G",
+        "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1641441345.76175946.png",
+        "price":26999,
+        "strike_off":31999,
+        "storage":"6GB+128GB"
+    },
+    {
+        "category":"phone",
+        "brand":"xiaomi",
+        "title":"Mi 11X Pro 5G",
+        "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1619082947.53189274.png",
+        "price":31999,
+        "strike_off":49999,
+        "storage":"4GB+256GB"
+    },
+    {
+        "category":"phone",
+        "brand":"xiaomi",
+        "title":"Mi 11 Lite",
+        "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1623672151.94276893.jpg",
+        "price":17999,
+        "strike_off":25999,
+        "storage":"4GB+128GB"
+    },
+    {
+        "category":"phone",
+        "brand":"xiaomi",
+        "title":"Mi 10T Pro",
+        "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1607070559.82223168.png",
+        "price":24999,
+        "strike_off":47999,
+        "storage":"4GB+128GB"
+    },
         {
-            "category":"phone",
-            "brand":"xiaomi",
-            "title":"Xiaomi 11 Lite NE 5G",
-            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1632833370.2214110.png",
-            "color":"Jazz Blue",
-            "price":26999,
-            "strike_off":31999,
-            "storage":"128GB"
+          "title": "Redmi Note 9",
+          "price": 11999,
+          "brand":"redmi",
+          "strike_off": 18999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1604032687.87717763.png?width=400&height=400",
+          "storage": "6GB+128GB"
         },
         {
-            "category":"phone",
-            "brand":"xiaomi",
-            "title":"Xiaomi 12 Pro 5G",
-            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1650980960.19661951.jpg",
-            "color":"Opera Mauve",
-            "price":59999,
-            "strike_off":84999,
-            "storage":"256GB"
+          "title": "Redmi Note 10S",
+          "price": 13999,
+          "brand":"redmi",
+          "strike_off": 16999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1629200496.54463363.jpg?width=400&height=400",
+          "storage": "6GB+64GB"
         },
         {
-            "category":"phone",
-            "brand":"xiaomi",
-            "title":"Mi 11X 5G",
-            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1588906276.48578306.png",
-            "color":"Green",
-            "price":29999,
-            "strike_off":34999,
-            "storage":"128GB"
+          "title": "Redmi Note 10 Lite",
+          "price": 9999,
+          "brand":"redmi",
+          "strike_off": 16999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1632996077.33542882.jpg?width=400&height=400",
+          "storage": "4GB+64GB"
         },
         {
-            "category":"phone",
-            "brand":"xiaomi",
-            "title":"Xiaomi 11i 5G",
-            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1641441345.76175946.png",
-            "color":"Green",
-            "price":26999,
-            "strike_off":31999,
-            "storage":"128GB"
+          "title": "Redmi Note 10 Pro",
+          "price": 16549,
+          "brand":"redmi",
+          "strike_off": 19999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1630388829.1874910.jpg?width=400&height=400",
+          "storage": "6GB+128GB"
         },
         {
-            "category":"phone",
-            "brand":"xiaomi",
-            "title":"Mi 11X Pro 5G",
-            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1619082947.53189274.png",
-            "color":"Green",
-            "price":31999,
-            "strike_off":49999,
-            "storage":"256GB"
+          "title": "Redmi Note 11",
+          "price": 12999,
+          "brand":"redmi",
+          "strike_off": 17999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1644212187.55324564.png?width=400&height=400",
+          "storage": "4GB+64GB"
         },
         {
-            "category":"phone",
-            "brand":"xiaomi",
-            "title":"Mi 11 Lite",
-            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1623672151.94276893.jpg",
-            "color":"Vinyl black",
-            "price":17999,
-            "strike_off":25999,
-            "storage":"128GB"
+          "title": "Redmi Note 11 Pro+ 5G",
+          "price": 19999,
+          "brand":"redmi",
+          "strike_off": 24999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1646677541.11648640.png?width=400&height=400",
+          "storage": "6GB+128GB"
         },
         {
-            "category":"phone",
-            "brand":"xiaomi",
-            "title":"Mi 10T Pro",
-            "image":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1607070559.82223168.png",
-            "color":"Vinyl black",
-            "price":24999,
-            "strike_off":47999,
-            "storage":"128GB"
-        }
-        
-    ],
+          "title": "Redmi Note 11T 5G",
+          "price": 16999,
+          "brand":"redmi",
+          "strike_off": 18999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1638175378.86661157.jpg?width=400&height=400",
+          "storage": "6GB+64GB"
+        },
+        {
+          "title": "Redmi Note 9 Pro",
+          "price": 11999,
+          "brand":"redmi",
+          "strike_off": 17999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1595850747.63614686.png?width=400&height=400",
+          "storage": "4GB+128GB"
+        },
+        {
+          "title": "Redmi Note 11S",
+          "price": 15999,
+          "brand":"redmi",
+          "strike_off": 20999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1644290874.27643906.png?width=400&height=400",
+          "storage": "6GB+128GB"
+        },
+        {
+          "title": "Redmi 10",
+          "price": 9499,
+          "brand":"redmi",
+          "strike_off": 14999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1647422910.83341748.png?width=400&height=400",
+          "storage": "4GB+64GB"
+        },
+        {
+          "title": "Redmi 10A",
+          "price": 8499,
+          "brand":"redmi",
+          "strike_off": 10999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1650393960.86276248.png?width=400&height=400",
+          "storage": "3GB+32GB"
+        },
+        {
+          "title": "Redmi K50i 5G",
+          "price": 23999,
+          "brand":"redmi",
+          "strike_off": 31999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1658292460.87091068.jpg?width=400&height=400",
+          "storage": "6GB+128GB"
+        },
+        {
+          "title": "Redmi A1+",
+          "price": 7499,
+          "brand":"redmi",
+          "strike_off": 9999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1665657395.99737831.jpg?width=400&height=400",
+          "storage": "2GB+32GB"
+        },
+        {
+          "title": "Redmi 11 Prime",
+          "price": 11999,
+          "brand":"redmi",
+          "strike_off": 14999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1663331060.38692361.jpg?width=400&height=400",
+          "storage": "4GB+64GB"
+        },
+        {
+          "title": "Redmi Note 11 Pro",
+          "price": 17999,
+          "brand":"redmi",
+          "strike_off": 22999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1646677688.13713659.png?width=400&height=400",
+          "storage": "6GB+128GB"
+        },
+        {
+          "title": "Redmi 11 Prime 5G",
+          "price": 13999,
+          "brand":"redmi",
+          "strike_off": 15999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1662446288.16667229.jpg?width=400&height=400",
+          "storage": "4GB+64GB"
+        },
+        {
+          "title": "Redmi 10 Prime",
+          "price": 12999,
+          "brand":"redmi",
+          "strike_off": 16999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1630575867.95065809.png?width=400&height=400",
+          "storage": "6GB+128GB"
+        },
+        {
+          "title": "Redmi Note 10",
+          "price": 11549,
+          "brand":"redmi",
+          "strike_off": 15999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1641368235.69883115.png?width=400&height=400",
+          "storage": "4GB+64GB"
+        },
+        {
+          "title": "Redmi 9i Sport",
+          "price": 7999,
+          "brand":"redmi",
+          "strike_off": 9999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1632716975.98795115.jpg?width=400&height=400",
+          "storage": "4GB+64GB"
+        },
+        {
+          "title": "Redmi Note 11 SE",
+          "price": 12999,
+          "brand":"redmi",
+          "strike_off": 16999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1661449252.27037991.jpg?width=400&height=400",
+          "storage": "6GB+64GB"
+        },
+        {
+          "title": "Redmi A1",
+          "price": 5999,
+          "brand":"redmi",  
+          "strike_off": 8999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1662398968.70394845.jpg?width=400&height=400",
+          "storage": "2GB+32GB"
+        },
+        {
+          "title": "Redmi 10 Power",
+          "price": 12999,
+          "brand":"redmi",
+          "strike_off": 18999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1651229414.38828345.jpg?width=400&height=400",
+          "storage": "8GB+128GB"
+        },
+        {
+          "title": "Redmi Note 7 Pro",
+          "price": 5999,
+          "brand":"redmi",
+          "strike_off": 15999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1565088983.25427793.png?width=400&height=400",
+          "storage": "4GB+64GB"
+        },
+        {
+          "title": "Redmi 9 Power",
+          "price": 9499,
+          "brand":"redmi", 
+          "strike_off": 13999,
+          "category": "phone",
+          "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1608119123.13046347.png?width=400&height=400",
+          "storage": "4GB+64GB"
+        },    
+         {
+              "title": "Redmi Note 8",
+              "price": 9999,
+              "brand":"redmi", 
+              "strike_off": 13999,
+              "category": "phone",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1574831621.49069418.jpg?width=400&height=400",
+              "storage": "4GB+64GB"
+            },
+            {
+              "title": "Redmi Note 8 Pro",
+              "price": 12999,
+              "brand":"redmi", 
+              "strike_off": 18999,
+              "category": "phone",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1571208664.39472453.png?width=400&height=400",
+              "storage": "6GB+64GB"
+            },
+            {
+              "title": "Redmi 9A Sport",
+              "price": 7999,
+              "strike_off": 8499,
+              "brand":"redmi", 
+              "category": "phonestock",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1632717155.68085426.jpg?width=400&height=400",
+              "storage": "2GB+32GB"
+            },
+            {
+              "title": "Redmi Note 10T 5G",
+              "price": 12999,
+              "strike_off": 18999,
+              "brand":"redmi", 
+              "category": "phone",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1626717460.33953140.png?width=400&height=400",
+              "storage": "6GB+128GB"
+            },
+            {
+              "title": "Redmi Note 9 Pro Max",
+              "price": 12999,
+              "strike_off": 15999,
+              "brand":"redmi", 
+              "category": "phone",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1600136300.39045912.png?width=400&height=400",
+              "storage": "6GB+64GB"
+            },
+            {
+              "title": "Redmi Note 7S",
+              "price": 6999,
+              "strike_off": 11999,
+              "brand":"redmi", 
+              "category": "phonestock",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1565090633.90836571.png?width=400&height=400",
+              "storage": "3GB+32GB"
+            },
+            {
+              "title": "Redmi Note 10 Pro Max",
+              "price": 17999,
+              "strike_off": 23999,
+              "brand":"redmi", 
+              "category": "phone",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1628859297.27166292.png?width=400&height=400",
+              "storage": "6GB+128GB"
+            },
+            {
+              "title": "Redmi 4",
+              "price": 3999,
+              "strike_off": 6999,
+              "brand":"redmi", 
+              "category": "phone",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1494920678.62048121.jpg?width=400&height=400",
+              "storage": "2GB+16GB"
+            },
+            {
+              "title": "Redmi 9 Prime",
+              "price": 8999,
+              "strike_off": 11999,
+              "brand":"redmi", 
+              "category": "phonestock",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1600136688.43671930.png?width=400&height=400",
+              "storage": "4GB+64GB"
+            },
+            {
+              "title": "Redmi 10 Prime 2022",
+              "price": 12999,
+              "strike_off": 15999,
+              "brand":"redmi", 
+              "category": "phone",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1650394232.68755652.png?width=400&height=400",
+              "storage": "4GB+64GB"
+            },
+            {
+              "title": "Redmi Note 10 Pro Max",
+              "price": 17999,
+              "strike_off": 22999,
+              "brand":"redmi", 
+              "category": "phone",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1630388581.17618331.jpg?width=400&height=400",
+              "storage": "6GB+128GB"
+            },
+            {
+              "title": "Redmi 9 Prime",
+              "price": 8999,
+              "strike_off": 11999,
+              "brand":"redmi", 
+              "category": "phonestock",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1596478442.83826029.png?width=400&height=400",
+              "storage": "4GB+64GB"
+            },
+            {
+              "title": "Redmi Note 8",
+              "price": 9999,
+              "strike_off": 11999,
+              "brand":"redmi", 
+              "category": "phonestock",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1591083267.4281959.jpg?width=400&height=400",
+              "storage": "4GB+64GB"
+            },
+            {
+              "title": "Redmi 4A",
+              "price": 5999,
+              "strike_off": 6499,
+              "brand":"redmi", 
+              "category": "phonestock",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1489977997.94014593.jpg?width=400&height=400",
+              "storage": "2GB+16GB"
+            },
+            {
+              "title": "Redmi 7",
+              "price": 6999,
+              "strike_off": 10999,
+              "brand":"redmi", 
+              "category": "phonestock",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1556089837.97787702.png?width=400&height=400",
+              "storage": "3GB+32GB"
+            },
+            {
+              "title": "Redmi 7",
+              "price": 4999,
+              "strike_off": 9999,
+              "brand":"redmi", 
+              "category": "phonestock",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1556089668.91953055.png?width=400&height=400",
+              "storage": "2GB+32GB"
+            },
+            {
+              "title": "Redmi 9A Sport Jio",
+              "price": 7999,
+              "strike_off": 8499,
+              "brand":"redmi", 
+              "category": "phonestock",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1663333001.32854744.jpg?width=400&height=400",
+              "storage": "2GB+32GB"
+            },
+            {
+              "title": "Redmi 4A",
+              "price": 3999,
+              "strike_off": 7499,
+              "brand":"redmi", 
+              "category": "phonestock",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1503977167.67082122.jpg?width=400&height=400",
+              "storage": "3GB+32GB"
+            },
+            {
+              "title": "Redmi 4",
+              "price": 3999,
+              "strike_off": 7499,
+              "brand":"redmi", 
+              "category": "phone",
+              "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1497326193.51628967.jpg?width=400&height=400",
+              "storage": "2GB+16GB"
+            }
+          
+      ],
 
 
     "tv":[

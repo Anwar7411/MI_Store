@@ -7,7 +7,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const Signup = () => {
   const [values, setValues] = React.useState({
     name: '',
-    Email: '',
+    email: '',
     password: '',
     confirmPassword: '',
     showPassword: false,
@@ -70,8 +70,8 @@ const Signup = () => {
           type="email"
           id="outlined-required"
           label="Email"
-          value={values.Email}
-          onChange={handleChange('Email')}
+          value={values.email}
+          onChange={handleChange('email')}
           style={{ width: "400px", backgroundColor: "#2d2d2d" }}
           inputProps={{ style: { color: "white", height: "30px", fontSize: "20px" } }}
         /><br />

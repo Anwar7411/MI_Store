@@ -17,7 +17,7 @@
 }
 .secondNav>div:nth-child(1) p{
     margin-top: 8px;
-    color: aliceblue;
+    color: black;
     cursor: pointer;
 }
 .secondNav>div:nth-child(1) p:hover{
