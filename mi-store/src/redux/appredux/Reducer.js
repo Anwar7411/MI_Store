@@ -8,7 +8,7 @@ const initialState = {
     laptop: [],
 }
 
-const Reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     const { type, payload } = action;
 
     switch (type) {
@@ -52,3 +52,5 @@ const Reducer = (state = initialState, action) => {
         default: return state
     }
 }
+
+export  {reducer}
