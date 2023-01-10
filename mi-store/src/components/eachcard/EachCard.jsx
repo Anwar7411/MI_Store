@@ -22,10 +22,12 @@ navigate(`/singleproduct/${el._id}`)
         <button>Add to Cart</button>
       </div>
       <img src={el.image} alt="" />
-      <div className='eachcardthirddiv'>
+      {el.category=="phone"?<div className='eachcardthirddiv'>
         <p>8GB+128GB</p>
         <p>12GB+256GB</p>
-      </div>
+      </div>:<div></div>
+      }
+      
     </div>
   )
 }

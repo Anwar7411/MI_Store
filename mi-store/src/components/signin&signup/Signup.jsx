@@ -1,8 +1,10 @@
-import { Box, Button, FilledInput, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from '@mui/material'
+import {  Box, Button, FilledInput, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, Snackbar, TextField } from '@mui/material'
 import React from 'react'
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import MuiAlert from '@mui/material/Alert';
+import axios from 'axios';
 
 const Signup = () => {
   const [values, setValues] = React.useState({
@@ -13,7 +15,13 @@ const Signup = () => {
     showPassword: false,
     showConfirmpassword: false
   });
- 
+  const [open, setOpen] = React.useState(false);
+  const[open2,setOpen2]=React.useState(false);
+
+  const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
   };
@@ -44,7 +52,40 @@ const Signup = () => {
       },
     },
   });
+ const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+    setOpen2(false);
+  };
 
+  const handlesignup = () => {
+    if (values.password == values.confirmPassword) {
+      console.log("else1")
+      const payload = {
+        email: values.email,
+        password: values.password,
+        name: values.name,
+      }
+      axios({
+        method: "post",
+        url: "http://localhost:8080/signup",
+        data: payload
+      }).then((res) => {
+        if(res.data=="Signup Successfull"){
+          setOpen2(true);
+        }
+        
+      }).catch((err)=>{
+        setOpen(true)
+      })
+    }else{
+      setOpen(true)
+    }
+
+  }
+  
 
   return (
     <Box component="form"
@@ -98,7 +139,8 @@ const Signup = () => {
             label="Password"
           />
         </FormControl>
-        <FormControl sx={{ m: 1, width: '400px', backgroundColor: "#2d2d2d", }} variant="outlined">
+        
+        <FormControl  sx={values.password==values.confirmPassword?{ m: 1, width: '400px', backgroundColor: "#2d2d2d", border:"1px solid green"}:{ m: 1, width: '400px', backgroundColor: "#2d2d2d", border:"1px solid red"}} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Confirm Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
@@ -121,11 +163,22 @@ const Signup = () => {
             label="Confirm Password"
           />
         </FormControl>
+        
         <ThemeProvider theme={theme}>
-          <Button variant="contained" color="primary" style={{ width: "400px", height: "50px", margin: "10px 10px", fontSize: "20px" }}>
+          <Button variant="contained" color="primary" onClick={handlesignup} style={{ width: "400px", height: "50px", margin: "10px 10px", fontSize: "20px" }}>
             Sign Up
           </Button>
         </ThemeProvider>
+        <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}   anchorOrigin={{ vertical:"top", horizontal:"center" }}>
+        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+           Signup Failed Please try again later!
+        </Alert>
+      </Snackbar>
+      <Snackbar open={open2} autoHideDuration={2000} onClose={handleClose}   anchorOrigin={{ vertical:"top", horizontal:"center" }}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+           Signup Successfull
+        </Alert>
+      </Snackbar>
       </div>
     </Box>
   )

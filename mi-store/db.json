@@ -455,15 +455,281 @@
 
 
     "tv":[
-        {
-            "category":"tv",
-            "image":"",
-            "color":"",
-            "title":"",
-            "price":"",
-            "strike_off":"",
-            "storage":"",
-            "desc":"" 
-        }
+      {
+        "title": "Xiaomi Smart TV X55 (139 cm)",
+        "price": 39999,
+        "strike_off": 54999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1663152481.76214901.jpg"
+      },
+      
+      {
+        "title": "Mi TV 4X 125.7 cm (50)",
+        "price": 30999,
+        "strike_off": 41999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1639641976.8828285.png"
+      },
+      {
+        "title": "Mi LED TV 4A PRO 108cm (43)",
+        "price": 19999,
+        "strike_off": 29999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1558081097.74988216.jpg"
+      },
+      {
+        "title": "Mi TV 4X 108 cm (43)",
+        "price": 27999,
+        "strike_off": 34999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1587896173.03128019.png"
+      },
+      {
+        "title": "Xiaomi Smart TV X50 (126 cm)",
+        "price": 34999,
+        "strike_off": 44999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1663152515.13515115.jpg"
+      },
+      
+      
+      
+      
+      {
+        "title": "Xiaomi Smart TV 5A Pro 32 (80cm) + Xiaomi Smart Speaker",
+        "price": 16999,
+        "strike_off": 31998,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1670232829.24294251.jpg"
+      },
+      {
+        "title": "Redmi Smart TV X50 125.7 cm (50 inches)",
+        "price": 32999,
+        "strike_off": 44999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1644409362.30458069.jpg"
+      },
+      
+      {
+        "title": "Xiaomi Smart TV 5A 100 cm (40 inch) Full HD LED Android TV (2022 Model)",
+        "price": 21999,
+        "strike_off": 29999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1650993107.7886868.jpg"
+      },
+  
+      {
+        "title": "Mi LED TV 4A Pro 80cm (32)",
+        "price": 16499,
+        "strike_off": 19999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1639642350.43484582.jpg"
+      },
+     
+      {
+        "title": "Redmi Smart TV X65 163.9 cm (65 inches)",
+        "price": 59999,
+        "strike_off": 74999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1644409341.0441812.jpg"
+      },
+      {
+        "title": "Mi TV 5X 43",
+        "price": 31999,
+        "strike_off": 49999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1629897150.48646618.jpg"
+      },
+     
+      
+      {
+        "title": "Mi TV 4A 100 cm (40)",
+        "price": 18999,
+        "strike_off":24999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1605168430.23819234.jpg"
+      },
+      {
+        "title": "Mi  TV 5X 50",
+        "price": 40999,
+        "strike_off": 59999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1629896817.38484932.jpg"
+      },
+      
+     
+      {
+        "title": "Xiaomi OLED Vision TV 55",
+        "price": 99999,
+        "strike_off": 199999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1650976094.42847806.jpg"
+      },
+      {
+        "title": "Mi TV QLED 4k 138.8 cm (55)",
+        "price": 59999,
+        "strike_off": 65999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1608102100.09624560.jpg"
+      },
+
+      {
+        "title": "Mi TV 4A 108cm (43) Horizon Edition",
+        "price": 24999,
+        "strike_off": 29999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1599298110.02127922.png"
+      },
+      {
+        "title": "Xiaomi Smart TV 5A 108 cm (43 inch) Full HD LED Android TV (2022 Model)",
+        "price": 24999,
+        "strike_off": 35999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1650992919.42213385.jpg"
+      },
+      
+     
+      {
+        "title": "Xiaomi Smart TV 5A 80 cm (32 inch) HD Ready LED Android TV (2022 Model)",
+        "price": 13999,
+        "strike_off": 24999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1650993021.84395849.jpg"
+      },
+     
+      
+      {
+        "title": "Redmi Smart TV X43 108 cm (43 inches)",
+        "price": 26999,
+        "strike_off": 42999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1646032103.43951518.jpg"
+      },
+      {
+        "title": "Mi  TV 5X 50",
+        "price": 40999,
+        "strike_off": 59999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1629896817.38484932.jpg"
+      },
+      
+      {
+        "title": "Mi TV 4A 80cm (32) Horizon Edition",
+        "price": 16499,
+        "strike_off": 19999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1642760767.3293196.png"
+      },
+      {
+        "title": "Mi TV Stick",
+        "price": 2999,
+        "strike_off": 3499,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1596559950.75387025.png"
+      },
+      {
+        "title": "Mi LED TV 4A PRO 123.2 cm (49)",
+        "price": 26499,
+        "strike_off": 32999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1538031719.90276454.png"
+      },
+      {
+        "title": "Mi TV 4X 138.8 cm (55)",
+        "price": 36999,
+        "strike_off": 44999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1587610315.20344354.png"
+      },
+      {
+        "title": "MI LED TV 4C 43 (108cm)",
+        "price": 19999,
+        "strike_off": 34999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1632893007.55719480.png"
+      },
+      {
+        "title": "Mi LED TV 4C 80cm (32)",
+        "price": 16499,
+        "strike_off": 19999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1628056176.973904.jpg"
+      },
+      {
+        "title": "Mi IR Remote",
+        "price": 199,
+        "strike_off": 249,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1571121542.34074138.png"
+      },
+      {
+        "title": "Mi Bluetooth Voice Remote",
+        "price": 499,
+       "strike_off": 999,
+   "ctegory": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1656070964.09529482.jpg"
+      },
+      {
+        "title": "Mi IR Cable Set-top box (STB) Controller",
+        "price": 249,
+        "strike_off": 299,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1518525823.29919034.png"
+      },
+      {
+        "title": "Mi TV Stick",
+        "price": 2999,
+        "strike_off": 3499,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1596559950.75387025.png"
+      },
+      {
+        "title": "MiTV Webcam",
+        "price": 1999,
+        "strike_off": 3999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1624440404.55312913.jpg"
+      },
+      {
+        "title": "TV 32/32 Pro Wall Mount Black",
+        "price": 399,
+        "strike_off": 699,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1524635324.71848791.png"
+      },
+      {
+        "title": "Mi Box 4K",
+        "price": 3999,
+        "strike_off": 4999,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1625751583.66432947.jpg"
+      },
+      {
+        "title": "Mi TV Swivel Wall Mount (43 and above)",
+        "price": 1199,
+        "strike_off": 1899,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1571137575.11458775.png"
+      },
+      {
+        "title": "TV 40/43/49/50/55/65/75 Wall Mount",
+        "price": 499,
+        "strike_off": 899,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1524635115.11945807.png"
+      },
+      {
+        "title": "Mi IR Remote",
+        "price": 199,
+        "strike_off": 249,
+        "category": "tv",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1571121542.34074138.png"
+      }
+    ],
+
+    "laptop":[
+      {
+
+      }
     ]
 }

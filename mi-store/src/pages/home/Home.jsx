@@ -1,8 +1,8 @@
 import React from 'react'
 import "./Home.css"
-import Carousel_home from '../components/Carousel_home';
+import Carousel_home from '../../components/carousel/Carousel_home';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-import Second_Nav from '../components/Second_Nav';
+import Second_Nav from '../../components/navbar&footer/Second_Nav';
 
 
 const Home = () => {

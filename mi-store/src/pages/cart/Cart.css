@@ -1,0 +1,75 @@
+.tablerow>td:nth-child(2)>div{
+display: flex;
+gap: 30px;
+
+}
+
+.tablerow{
+margin-top: 15px;
+}
+
+.tablerow>td:nth-child(1) h6,.tablerow>td:nth-child(3) h6{
+    margin-top: 70px;
+    font-size: 16px;
+}
+.tablerow>td:nth-child(4)>div{
+    margin-top: 70px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.tablerow>td:nth-child(5) h5{
+font-family:  "Camphor Pro VF" - 400;
+color: #ff6700;
+margin-top: 70px;
+}
+.tablerow>td:nth-child(6)>div{
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+.tablerow>td:nth-child(2) img{
+    width: 250px;
+    height: 200px;
+}
+.tablerow>td:nth-child(2){
+    width: 700px;
+}
+.tablerow>td:nth-child(2) h5{
+    font-family: "Camphor Pro VF", "Camphor Pro", sans-serif;
+    font-size: 18px;
+    margin-top: 70px;
+    font-weight: 400;
+}
+.maintable{
+    width: 95%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.maintable th{
+   font-family:  "Camphor Pro VF" - 300;   
+}
+
+#lastdiv>div{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 75%;
+    color: #ff6700;
+}
+
+#lastdiv button{
+  font-family: "Camphor Pro VF" - 700;
+  font-weight: 700;
+  font-size: 22px;
+  width: 180px;
+  height: 50px;
+  background-color: #ff6700;
+  color:#ffffff;
+  border: none;
+  border-radius: 15px;
+  margin-left: 70%;
+  margin-top: 20px;
+}

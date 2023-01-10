@@ -1,19 +1,18 @@
 import { Box } from '@mui/system'
 import axios from 'axios';
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import './SingleProductView.css'
 
 const SingleProductview = () => {
     const [quantity, setQuantity] = useState(1);
     const [choose, setChoose] = useState([]);
     const [data, setData] = useState({})
     const [totalprice, setTotalprice] = useState();
+    const navigate=useNavigate();
 
     const param = useParams();
-
-    console.log(param.id)
-
     const tv = ["https://i01.appmifile.com/webfile/globalimg/7/845301BA-AE14-10A4-D7D9-15D830EE43BD.jpg", "https://i01.appmifile.com/webfile/globalimg/7/59295F81-DDB7-54D9-D900-91BAD83E459C.jpg",
         "https://i01.appmifile.com/webfile/globalimg/7/7B21CA23-3A52-D8F9-AD66-EF529F211A27.jpg", "https://i01.appmifile.com/webfile/globalimg/7/72ABE6B8-D4FB-2F53-B051-2593408B3660.jpg",
         "https://i01.appmifile.com/webfile/globalimg/7/1121CF0A-B725-B659-8301-4E0451C27009.jpg", "https://i01.appmifile.com/webfile/globalimg/7/3B1EC0F3-7057-8BC1-B03E-87DB3310CB3E.jpg"
@@ -31,12 +30,21 @@ const SingleProductview = () => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/phones/single/${param.id}`)
-            .then((res) => {
-                setData(res.data);
+        fetch();
+        async function fetch(){
+            const phonedata=await axios.get(`http://localhost:8080/phones/single/${param.id}`).then((res) =>res.data) 
+            const tvs=await axios.get(`http://localhost:8080/tv/single/${param.id}`).then((res) =>res.data) 
+            if(phonedata){
+                setData(phonedata);
                 setChoose(phone);
-                setTotalprice(res.data.price)
-            })
+                setTotalprice(phonedata.price)
+            }else if(tvs){
+                setData(tvs);
+                setChoose(tv);
+                setTotalprice(tvs.price)
+            }
+        }
+       
     }, [param.id])
 
 
@@ -51,9 +59,16 @@ const SingleProductview = () => {
         setQuantity(quantity - 1)
         setTotalprice(total)
     }
+     const handlebuy=()=>{
+        data.quantity=quantity;
+        let dataprod=JSON.parse(localStorage.getItem("cart")) || [];
+        dataprod.push(data)
+       localStorage.setItem("cart",JSON.stringify(dataprod));
+       navigate("/cart")
+     }
     return (
         <Box>
-            <Box sx={{ width: "60%", display: "flex", margin: "auto", marginTop: "20px" }}>
+            <Box sx={{ width: "60%", display: "flex", margin: "auto", marginTop: "20px",gap:"50px" ,background:"#f7f7f7"}}>
                 <Box>
                     <img src={data.image} alt="" width="450px" height="400px" />
                 </Box>
@@ -88,7 +103,7 @@ const SingleProductview = () => {
                         </Box>
                     </Box>
                     <Box>
-                        <Box sx={{ display: "flex", justifyContent: "space-between", width: "90%", margin: "auto", marginBottom: "20px" }}>
+                        <Box sx={{ display: "flex", justifyContent: "space-between", width: "90%", margin: "auto", marginBottom: "20px",gap:"40px" }}>
                             <p>{data.title}</p>
                             <p>{quantity} * {`${data.price}`}</p>
                         </Box>
@@ -97,7 +112,7 @@ const SingleProductview = () => {
                             <h5><CurrencyRupeeIcon sx={{ height: "18px" }} />{Number(`${data.price}`) * quantity}</h5>
                         </Box>
                     </Box>
-                    <button style={{ display: "block", color: "white", backgroundColor: "#191919", width: "75%", margin: "auto", justifyContent: "center", padding: "3px", borderRadius: "10px", marginBottom: "15px" }}>BUY NOW</button>
+                    <button style={{ display: "block", color: "white", backgroundColor: "#191919", width: "75%", margin: "auto", justifyContent: "center", padding: "3px", borderRadius: "10px", marginBottom: "15px" }} onClick={handlebuy}>BUY NOW</button>
                 </Box>
             </Box>
 

@@ -2,8 +2,8 @@ import React from 'react'
 import "./SigninSignup.css"
 import Divider from '@mui/material/Divider';
 import { useState } from 'react';
-import Signin from '../components/Signin';
-import Signup from '../components/Signup';
+import Signin from '../../components/signin&signup/Signin';
+import Signup from '../../components/signin&signup/Signup';
 import { Link } from 'react-router-dom';
 
 const SigninSignup = () => {
