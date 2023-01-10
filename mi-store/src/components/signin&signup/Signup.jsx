@@ -140,7 +140,7 @@ const Signup = () => {
           />
         </FormControl>
         
-        <FormControl  sx={values.password==values.confirmPassword?{ m: 1, width: '400px', backgroundColor: "#2d2d2d", border:"1px solid green"}:{ m: 1, width: '400px', backgroundColor: "#2d2d2d", border:"1px solid red"}} variant="outlined">
+        <FormControl  sx={{ m: 1, width: '400px', backgroundColor: "#2d2d2d"}} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Confirm Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"

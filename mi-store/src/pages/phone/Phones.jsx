@@ -29,10 +29,10 @@ const Phones = () => {
       };
      console.log("count",count)
     return (
-        <div>
+        <div style={{marginTop:"100px"}}>
             <div style={{ display: "flex" }}>
                 <Box sx={{ minWidth: 120 }}>
-                    <FormControl sx={{ width: "200px", margin: "15px 40px" }}>
+                    <FormControl sx={{ width: "150px", margin: "15px 120px",border:"1px solid #ff6900" }}>
                         <InputLabel id="demo-simple-select-label">Brand</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
@@ -48,7 +48,7 @@ const Phones = () => {
                     </FormControl>
                 </Box>
                 <Box sx={{ minWidth: 120 }}>
-                    <FormControl sx={{ width: "200px", margin: "15px 40px" }}>
+                    <FormControl sx={{ width: "150px", margin: "15px 0px",border:"1px solid #ff6900" }}>
                         <InputLabel id="demo-simple-select-label">Sort</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"

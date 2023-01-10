@@ -1,4 +1,4 @@
-import { Box, Button, FilledInput, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from '@mui/material'
+import { Alert, Box, Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, Snackbar, TextField } from '@mui/material'
 import React from 'react'
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
@@ -12,6 +12,8 @@ const Signin = () => {
     password: '',
     showPassword: false,
   });
+  const [open, setOpen] = React.useState(false);
+  const[open2,setOpen2]=React.useState(false);
 
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
@@ -34,7 +36,13 @@ const Signin = () => {
       },
     },
   });
-
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+    setOpen2(false);
+  };
   const handlesignin=()=>{
     const payload={
       email:values.email,
@@ -44,6 +52,10 @@ const Signin = () => {
       method:"post",
       url:"http://localhost:8080/login",
       data:payload
+    }).then(()=>{
+      setOpen2(true)
+    }).catch((err)=>{
+      setOpen(true)
     })
   }
 
@@ -99,7 +111,16 @@ const Signin = () => {
         <div><p style={{ width: "150px", color: "#e3641d", margin: "10px", fontSize: "18px" }}>Forget Password ?</p></div>
         <p style={{ color: "#e3641d", marginTop: "10px", fontSize: "18px" }}>Signin with your Phone Number</p>
       </div>
-
+      <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}   anchorOrigin={{ vertical:"top", horizontal:"center" }}>
+        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+           Login Failed
+        </Alert>
+      </Snackbar>
+      <Snackbar open={open2} autoHideDuration={2000} onClose={handleClose}   anchorOrigin={{ vertical:"top", horizontal:"center" }}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+           Login Successfull
+        </Alert>
+      </Snackbar>
     </Box>
   )
 }

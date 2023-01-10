@@ -2,7 +2,7 @@ import React from 'react'
 import "./Home.css"
 import Carousel_home from '../../components/carousel/Carousel_home';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-import Second_Nav from '../../components/navbar&footer/Second_Nav';
+import Navbar from '../../components/navbar&footer/Navbar';
 
 
 const Home = () => {
@@ -19,14 +19,13 @@ const firstCarousel=["https://i02.appmifile.com/439_operator_in/25/11/2022/ef10a
    ]      
 
     return (
-        <div>
-            <div className='second_Nav'>
-                <Second_Nav />
-            </div>
+        <div className='maindiv'>
             <div>
                 <Carousel_home arr={firstCarousel}/>
             </div>
-
+            <div >
+                <video  style={{width:"100%"}} autoPlay loop muted><source src="http://global-shop.inf.miui.com/c51f4df2d285d6c7783c9b4bb6d59de9" type='video/mp4' /></video>
+            </div>
             <div className='maingrid'>
                 <p>STAR PRODUCTS</p>
                 <div className='homegrid'>
@@ -37,7 +36,9 @@ const firstCarousel=["https://i02.appmifile.com/439_operator_in/25/11/2022/ef10a
                 </div>
 
             </div>
-
+            <div>
+                <img src="https://i03.appmifile.com/355_operator_in/05/01/2023/bbbc66aeeba5060ee49d387b4fbe6087.jpg" width="100%" alt="" />
+            </div>
             <div className='maingrid'>
                 <p>PRODUCT REVIEWS</p>
                 <div className='reviewflexdiv'>
@@ -60,6 +61,9 @@ const firstCarousel=["https://i02.appmifile.com/439_operator_in/25/11/2022/ef10a
                     </div>
 
                 </div>
+            </div>
+            <div >
+                <video  style={{width:"100%"}} autoPlay loop muted><source src="https://i02.appmifile.com/779_operatorx_operatorx_pm/30/08/2022/787d5f747d261d18248f9b4134b6a8ce.mp4" type='video/mp4' /></video>
             </div>
 
             <div className='lastcarousel'>

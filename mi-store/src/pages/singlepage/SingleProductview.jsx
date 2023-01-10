@@ -67,7 +67,7 @@ const SingleProductview = () => {
        navigate("/cart")
      }
     return (
-        <Box>
+        <Box sx={{marginTop:"100px"}}>
             <Box sx={{ width: "60%", display: "flex", margin: "auto", marginTop: "20px",gap:"50px" ,background:"#f7f7f7"}}>
                 <Box>
                     <img src={data.image} alt="" width="450px" height="400px" />

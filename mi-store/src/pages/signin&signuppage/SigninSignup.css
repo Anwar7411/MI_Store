@@ -1,6 +1,7 @@
 .Signin{
     display: flex;
     background-color: #0f0f0f ;
+    margin-top: 60px;
 }
 .signinfirstdiv>img{
 height: 750px;

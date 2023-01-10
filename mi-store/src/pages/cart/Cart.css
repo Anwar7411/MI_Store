@@ -18,6 +18,12 @@ margin-top: 15px;
     gap: 10px;
     justify-content: center;
 }
+.tablerow>td:nth-child(4) button{
+    border:1px solid #ff6700;
+    width: 25px;
+    border-radius: 5px;
+    text-align: center;
+}
 .tablerow>td:nth-child(5) h5{
 font-family:  "Camphor Pro VF" - 400;
 color: #ff6700;
@@ -44,7 +50,7 @@ margin-top: 70px;
 .maintable{
     width: 95%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 100px;
     text-align: center;
 }
@@ -72,4 +78,5 @@ margin-top: 70px;
   border-radius: 15px;
   margin-left: 70%;
   margin-top: 20px;
+  cursor: pointer;
 }

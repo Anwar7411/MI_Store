@@ -1,42 +1,62 @@
-.navbar{
-    display: flex;
-    background-color: #212121 ;
-    margin: auto;
-    height: 35px;
-    justify-content: space-between;
+.secondNav{
+   height: 80px;
+   display: flex;
+   margin: auto;
+   justify-content: space-between;
+   font-weight: 400;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   margin-bottom: 20px;
+   z-index: 99;
+   background-color: #ffffff;
+   width:100%;
 }
-.navfirstdiv{
-    display: flex;
-    gap: 30px;
-    margin-left: 120px;
-    color: #9ea297;
-    font-size: 12px;
+.secondNav img{
+   width:  50px;
+   height: 45px;
+   cursor: pointer;
 }
- .navseconddiv{
-    display: flex;
-    gap: 30px;
-    margin-right: 200px;
-    color: #9ea297;
-    font-size: 12px;
- }
-.navseconddiv>p:hover{
-    color: white;
-    cursor: pointer;
- }
- .navfirstdiv>p:hover{
-    color: white;
-    cursor: pointer;
- }
 
+.secondNav>div:nth-child(1){
+   display: flex;
+   gap:40px;
+   margin-left: 120px;
+}
+.secondNav>div:nth-child(1) p{
+   margin-top: 8px;
+   color: black;
+   cursor: pointer;
+   
+}
+.textde{
+   text-decoration-line:none;
+   cursor: pointer;
+   color: black;
+}
+.secondNav>div:nth-child(1) p:hover,.textde:hover{
+   color: #ff6900 ;
+   font-weight: 600;
+   text-decoration-line:underline;
+}
+.secondNav>div:nth-child(2){
+   margin-right: 80px;
+   display: flex;
+   gap:40px
+}
+ 
  .footer{
     display: flex;
     background-color: #212121;
     gap: 80px;
     margin: auto;
     margin-top: 15px;
+    font-family: "Camphor Pro VF", "Camphor Pro", sans-serif;
+    line-height: 20px;
  }
  .footer p{
     color: #acaeac;
+    font-family: "Camphor Pro VF" - 700;
  }
  .footer>div{
     margin-top: 50px;
