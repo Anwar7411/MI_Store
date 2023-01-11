@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react'
 import axios from "axios"
 import { Box, FormControl, InputLabel, MenuItem, Pagination, Select, Stack, Typography } from '@mui/material'
 import EachCard from '../../components/eachcard/EachCard'
+import {Link, useNavigate} from 'react-router-dom'
+import {useDispatch,useSelector} from 'react-redux'
+import { getPhonesData } from '../../redux/appredux/Action'
+import { RotatingSquare, ThreeDots } from 'react-loader-spinner'
 
 const Phones = () => {
     const [data, setData] = useState([]);
@@ -10,14 +14,24 @@ const Phones = () => {
     const [page, setPage] = useState(1);
     const [limit, setLimit] = useState(12);
     const [count,setCount]=useState(5);
+    const dispatch=useDispatch();
+    const phones=useSelector((store)=>store.Appreducer.phones)
+    const isLoading=useSelector((store)=>store.Appreducer.isLoading)
+
     useEffect(() => {
-        axios.get(`http://localhost:8080/phones?order=${sort}&filter=${brand}&page=${page}&limit=${limit}`)
-            .then((res) => {
-                setData(res.data.data);
-                console.log("res",res.data.count)
-                setCount(Math.ceil(res.data.count/limit))
-            })
+        const quarayParams={
+            page,
+            sort,
+            brand,
+            limit
+        }
+        dispatch(getPhonesData(quarayParams)).then((res)=>{
+            setData(res.payload.data);
+            setCount(Math.ceil(res.payload.count/limit))
+        })
+
     }, [sort, brand,page])
+
     const handleChangedropdown1 = (event) => {
         setBrand(event.target.value);
     };
@@ -27,7 +41,22 @@ const Phones = () => {
     const handleChangepage = (event, value) => {
         setPage(value);
       };
-     console.log("count",count)
+       
+      if(isLoading){
+        return <div style={{marginTop:"300px",marginLeft:"45%",marginBottom:"500px"}}>
+            <RotatingSquare
+        height="100px"
+        width="200px"
+        color="#ff6900"
+        ariaLabel="rotating-square-loading"
+        strokeWidth="4"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+      />
+        </div>
+     }
+    
     return (
         <div style={{marginTop:"100px"}}>
             <div style={{ display: "flex" }}>
@@ -65,8 +94,8 @@ const Phones = () => {
                 </Box>
             </div>
             <div style={{ width: "95%", margin: "auto", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "20px", background: "#f7f7f7", marginTop: "20px" }}>
-                {data.length > 0 && data?.map((el) => (
-                    <EachCard el={el} />
+                {data && data?.map((el) => (
+                   <EachCard el={el} />
                 ))}
             </div>
             <div style={{margin:"30px 200px 30px 600px"}}>
@@ -74,6 +103,7 @@ const Phones = () => {
                     <Pagination count={count} page={page} onChange={handleChangepage} color="primary" />
                 </Stack>
             </div>
+           
         </div>
     )
 }

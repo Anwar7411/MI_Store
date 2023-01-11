@@ -10,11 +10,17 @@ import {useLocation,Link} from 'react-router-dom'
 import { Tooltip } from '@mui/material';
 import { Box } from '@mui/system';
 import CurrencyRupee from '@mui/icons-material/CurrencyRupee';
-
+import {useSelector,useDispatch} from 'react-redux'
+import { Logout } from '../../redux/authredux/Action';
+import { getCartData } from '../../redux/appredux/Action';
 
 const Navbar = () => {
-  const[cartnum,setCartNum]=React.useState(0);
-  const[data,setData]=React.useState([])
+  const dispatch=useDispatch();
+  const isAuth=useSelector((store)=>store.Authreducer.isAuth)
+  const carts=useSelector((store)=>store.Appreducer.cart)
+  const userDetails=useSelector((store)=>store.Authreducer.userDetails);
+  console.log("userDetails",userDetails,isAuth)
+
   const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -29,7 +35,7 @@ const Navbar = () => {
       width: 'auto',
     },
   }));
-const location=useLocation();
+
   const SearchIconWrapper = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 2),
     height: '100%',
@@ -57,13 +63,12 @@ const location=useLocation();
     },
   }));
   useEffect(()=>{
- const cart=JSON.parse(localStorage.getItem("cart"))
- if(cart?.length>0){
-   setData(cart)
-   setCartNum(cart?.length)
- }
-},[location])
-console.log("data",cartnum)
+ dispatch(getCartData())
+},[]);
+const handleLogout=()=>{
+dispatch(Logout())
+}
+
 return (
     <div className='secondNav'>
       <div>
@@ -88,8 +93,9 @@ return (
         </div>
          <Link to="/cart" className='textde'><Box style={{color:"black"}}>
             <Tooltip title={
+              carts?.length>0 ?
               <div style={{backgroundColor:"white",border:"none",color:"black"}}>
-                {data.map((el)=>(
+                {carts.map((el)=>(
               
               <div style={{display:"flex",alignItems:"center",width:"260px",marginTop:"5px",gap:"50px"}}>
                 <img src={el.image} alt="" style={{width:"100px",height:"60px"}} />
@@ -97,19 +103,27 @@ return (
                 <p style={{fontWeight:"400",fontSize:"16px"}}>{el.title}</p>
                 <p style={{fontSize:"14px",color:"#ff6900"}}><CurrencyRupee sx={{height:"15px"}}/><span style={{fontSize:"14px",fontWeight:"400",marginTop:"-4px"}}>{el.price}</span></p>
                 </div>
-              </div>
-            
+              </div>         
           ))}
           <Link to="/cart"><button style={{width:"90%",margin:"10px",color:"white",backgroundColor:"#191919",borderRadius:"8px",fontSize:"16px"}}>Check Out</button></Link>
-              </div>
-              
+              </div> : <div style={{fontSize:"16px",fontWeight:"400"}}>Cart Is Empty</div>
             } placement="bottom" arrow >
-            <Box><ShoppingCartOutlinedIcon fontSize="small" sx={{ marginTop: "-4px" }} /><span >{cartnum}</span></Box>
+            <Box><ShoppingCartOutlinedIcon fontSize="small" sx={{ marginTop: "-4px" }} /><span >{carts.length}</span></Box>
           </Tooltip>
           </Box></Link>
 
         <Box sx={{cursor:"pointer"}}>
         <Tooltip title={
+         userDetails && userDetails.email ? <div style={{backgroundColor:"white",border:"none",color:"black"}}>
+            <div>
+              <div style={{display:"flex",margin:"20px",gap:"20px"}}>
+                <img src="https://i.pinimg.com/originals/33/35/0a/33350a6314b66017370ada20437fff04.gif" width="70px" height="50px" alt="" />
+                 <p style={{fontSize:"18px",fontWeight:"300",color:"#ff6900",textAlign:"center",marginTop:"15px"}}>{userDetails.name}</p>
+              </div>
+            <p style={{fontSize:"16px",margin:"10px"}}>Email :<span style={{fontSize:"16px",color:"#ff6900"}}>{userDetails.email}</span></p>
+            </div>
+            <button style={{width:"90%",margin:"10px",color:"white",backgroundColor:"#191919",borderRadius:"8px",fontSize:"14px"}} onClick={handleLogout}>Log Out</button>
+          </div>:
           <div style={{width:"100px",backgroundColor:"white",color:"black",fontSize:"18px",textAlign:"center",fontWeight:"200"}}>
             <Link to="/login" className='textde'><div>SignIn</div></Link>
             <Link to="/login" className='textde'><div>SignUp</div></Link>

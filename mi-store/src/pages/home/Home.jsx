@@ -2,8 +2,6 @@ import React from 'react'
 import "./Home.css"
 import Carousel_home from '../../components/carousel/Carousel_home';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-import Navbar from '../../components/navbar&footer/Navbar';
-
 
 const Home = () => {
 

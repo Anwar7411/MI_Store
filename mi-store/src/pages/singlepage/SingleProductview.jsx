@@ -4,13 +4,18 @@ import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import './SingleProductView.css'
+import { getCartData } from '../../redux/appredux/Action';
+import {useSelector,useDispatch} from 'react-redux'
+import { RotatingSquare } from 'react-loader-spinner';
 
 const SingleProductview = () => {
     const [quantity, setQuantity] = useState(1);
     const [choose, setChoose] = useState([]);
     const [data, setData] = useState({})
     const [totalprice, setTotalprice] = useState();
+    const [isLoading,setLoading]=useState(true)
     const navigate=useNavigate();
+    const dispatch=useDispatch();
 
     const param = useParams();
     const tv = ["https://i01.appmifile.com/webfile/globalimg/7/845301BA-AE14-10A4-D7D9-15D830EE43BD.jpg", "https://i01.appmifile.com/webfile/globalimg/7/59295F81-DDB7-54D9-D900-91BAD83E459C.jpg",
@@ -28,7 +33,7 @@ const SingleProductview = () => {
         "https://i01.appmifile.com/webfile/globalimg/products/pc/mi-notebook-ultra/section16.jpg", "https://i01.appmifile.com/webfile/globalimg/products/pc/mi-notebook-ultra/section1801.jpg"
     ]
 
-
+    
     useEffect(() => {
         fetch();
         async function fetch(){
@@ -38,6 +43,7 @@ const SingleProductview = () => {
                 setData(phonedata);
                 setChoose(phone);
                 setTotalprice(phonedata.price)
+                setLoading(false)
             }else if(tvs){
                 setData(tvs);
                 setChoose(tv);
@@ -47,7 +53,20 @@ const SingleProductview = () => {
        
     }, [param.id])
 
-
+    if(isLoading){
+        return <div style={{marginTop:"300px",marginLeft:"45%",marginBottom:"500px"}}>
+        <RotatingSquare
+    height="100px"
+    width="200px"
+    color="#ff6900"
+    ariaLabel="rotating-square-loading"
+    strokeWidth="4"
+    wrapperStyle={{}}
+    wrapperClass=""
+    visible={true}
+  />
+    </div>
+    }
 
     const handleincrement = () => {
         const total = totalprice - (quantity * Number(data.price))
@@ -64,6 +83,7 @@ const SingleProductview = () => {
         let dataprod=JSON.parse(localStorage.getItem("cart")) || [];
         dataprod.push(data)
        localStorage.setItem("cart",JSON.stringify(dataprod));
+       dispatch(getCartData())
        navigate("/cart")
      }
     return (

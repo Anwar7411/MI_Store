@@ -7,15 +7,19 @@ import './Cart.css'
 import axios from 'axios'
 import { Alert, CircularProgress, Snackbar } from '@mui/material';
 import { ProgressBar } from 'react-loader-spinner'
+import {useSelector,useDispatch} from 'react-redux'
+import { getCartData } from '../../redux/appredux/Action';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const [cartitem, setCartItem] = useState([]);
   const [total, setTotal] = useState(0);
   const [buttonClick, setbuttonclick] = useState(false);
   const [open,setOpen]=useState(false);
-  const [] = useState(1)
-
-
+  const dispatch=useDispatch();
+  const navigate=useNavigate();
+  const isAuth=useSelector((store)=>store.Authreducer.isAuth)
+  const userDetails=useSelector((store)=>store.Authreducer.userDetails);
   useEffect(() => {
     let cart = JSON.parse(localStorage.getItem("cart"));
     setCartItem(cart);
@@ -28,7 +32,10 @@ const Cart = () => {
     })
     setTotal(totalprice)
   }, [cartitem])
-
+  
+  if(!isAuth){
+  navigate("/login")
+  }
 
   const handleIncrement = (id) => {
     let setcart = []
@@ -62,6 +69,7 @@ const Cart = () => {
     ))
     setCartItem(restproduct);
     localStorage.setItem("cart", JSON.stringify(restproduct));
+    dispatch(getCartData());
      setOpen(true)
   }
 
@@ -106,7 +114,7 @@ const Cart = () => {
               <td>
                 <div>
                   <img src={product.image} alt="" />
-                  <h5>{product.title}</h5>
+                  <h6>{product.title}</h6>
                 </div>
               </td>
               <td><h6>{product.price}</h6></td>
@@ -117,7 +125,7 @@ const Cart = () => {
                   <button onClick={() => handleIncrement(product._id)}>+</button>
                 </div>
               </td>
-              <td><h5>{Number(product.quantity) * Number(product.price)}</h5></td>
+              <td><h6>{Number(product.quantity) * Number(product.price)}</h6></td>
               <td>
                 <div onClick={() => handledelete(product._id)}><DeleteIcon /></div>
               </td>
@@ -130,7 +138,7 @@ const Cart = () => {
           <h5>Sub Total</h5>
           <h4><CurrencyRupeeIcon />{total}</h4>
         </div>
-        {buttonClick? <div><ProgressBar height="120" width="350" ariaLabel="progress-bar-loading" wrapperStyle={{}} wrapperClass="progress-bar-wrapper" borderColor = 'black' barColor = '#ff6700'/></div>
+        {buttonClick? <div><ProgressBar height="100" width="170" ariaLabel="progress-bar-loading" wrapperStyle={{}} wrapperClass="progress-bar-wrapper" borderColor = 'black' barColor = '#ff6700'/></div>
                       :<button onClick={() => { setbuttonclick(true); handleCheckout() }}>Check Out ({cartitem.length})</button> }
           
       </div>

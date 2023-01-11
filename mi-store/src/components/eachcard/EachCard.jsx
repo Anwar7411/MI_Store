@@ -3,16 +3,18 @@ import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import { useNavigate } from 'react-router-dom'
 import { Alert, Snackbar } from '@mui/material';
 import React from 'react'
+import {useDispatch,useSelector} from 'react-redux'
+import { getCartData } from '../../redux/appredux/Action';
 
 
 const EachCard = ({ el }) => {
   const [open2, setOpen2] = React.useState(false);
   const [open, setOpen] = React.useState(false);
+  const dispatch=useDispatch();
 
   const navigate = useNavigate()
 
   const handleClick = () => {
-
     navigate(`/singleproduct/${el._id}`)
   }
   const handleCart = () => {
@@ -26,6 +28,7 @@ const EachCard = ({ el }) => {
     el.quantity = 1;
     cart.push(el)
     localStorage.setItem("cart", JSON.stringify(cart));
+    dispatch(getCartData())
     setOpen2(true)
   }
   const handleClose = (event, reason) => {
@@ -47,7 +50,7 @@ const EachCard = ({ el }) => {
         <button onClick={handleClick}>Buy now</button>
         <button onClick={handleCart}>Add to Cart</button>
       </div>
-      <img src={el.image} alt="" />
+      <img src={el.image} alt="" onClick={handleClick}/>
       {el.category == "phone" ? <div className='eachcardthirddiv'>
         <p>8GB+128GB</p>
         <p>12GB+256GB</p>
