@@ -5,17 +5,18 @@ import { useNavigate, useParams } from 'react-router-dom';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import './SingleProductView.css'
 import { getCartData } from '../../redux/appredux/Action';
-import {useSelector,useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { RotatingSquare } from 'react-loader-spinner';
+import './SingleProductView.css'
 
 const SingleProductview = () => {
     const [quantity, setQuantity] = useState(1);
     const [choose, setChoose] = useState([]);
     const [data, setData] = useState({})
     const [totalprice, setTotalprice] = useState();
-    const [isLoading,setLoading]=useState(true)
-    const navigate=useNavigate();
-    const dispatch=useDispatch();
+    const [isLoading, setLoading] = useState(false)
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const param = useParams();
     const tv = ["https://i01.appmifile.com/webfile/globalimg/7/845301BA-AE14-10A4-D7D9-15D830EE43BD.jpg", "https://i01.appmifile.com/webfile/globalimg/7/59295F81-DDB7-54D9-D900-91BAD83E459C.jpg",
@@ -33,39 +34,40 @@ const SingleProductview = () => {
         "https://i01.appmifile.com/webfile/globalimg/products/pc/mi-notebook-ultra/section16.jpg", "https://i01.appmifile.com/webfile/globalimg/products/pc/mi-notebook-ultra/section1801.jpg"
     ]
 
-    
+
     useEffect(() => {
         fetch();
-        async function fetch(){
-            const phonedata=await axios.get(`http://localhost:8080/phones/single/${param.id}`).then((res) =>res.data) 
-            const tvs=await axios.get(`http://localhost:8080/tv/single/${param.id}`).then((res) =>res.data) 
-            if(phonedata){
+        async function fetch() {
+            const phonedata = await axios.get(`http://localhost:8080/phones/single/${param.id}`).then((res) => res.data)
+            const tvs = await axios.get(`http://localhost:8080/tv/single/${param.id}`).then((res) => res.data)
+            if (phonedata) {
                 setData(phonedata);
                 setChoose(phone);
                 setTotalprice(phonedata.price)
                 setLoading(false)
-            }else if(tvs){
+            } else if (tvs) {
                 setData(tvs);
                 setChoose(tv);
                 setTotalprice(tvs.price)
+                setLoading(false)
             }
         }
-       
+
     }, [param.id])
 
-    if(isLoading){
-        return <div style={{marginTop:"300px",marginLeft:"45%",marginBottom:"500px"}}>
-        <RotatingSquare
-    height="100px"
-    width="200px"
-    color="#ff6900"
-    ariaLabel="rotating-square-loading"
-    strokeWidth="4"
-    wrapperStyle={{}}
-    wrapperClass=""
-    visible={true}
-  />
-    </div>
+    if (isLoading) {
+        return <div className='loader'>
+            <RotatingSquare
+                height="100px"
+                width="200px"
+                color="#ff6900"
+                ariaLabel="rotating-square-loading"
+                strokeWidth="4"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+            />
+        </div>
     }
 
     const handleincrement = () => {
@@ -78,74 +80,74 @@ const SingleProductview = () => {
         setQuantity(quantity - 1)
         setTotalprice(total)
     }
-     const handlebuy=()=>{
-        data.quantity=quantity;
-        let dataprod=JSON.parse(localStorage.getItem("cart")) || [];
+    const handlebuy = () => {
+        data.quantity = quantity;
+        let dataprod = JSON.parse(localStorage.getItem("cart")) || [];
         dataprod.push(data)
-       localStorage.setItem("cart",JSON.stringify(dataprod));
-       dispatch(getCartData())
-       navigate("/cart")
-     }
+        localStorage.setItem("cart", JSON.stringify(dataprod));
+        dispatch(getCartData())
+        navigate("/cart")
+    }
     return (
-        <Box sx={{marginTop:"100px"}}>
-            <Box sx={{ width: "60%", display: "flex", margin: "auto", marginTop: "20px",gap:"50px" ,background:"#f7f7f7"}}>
-                <Box>
+        <div className='singlemain'>
+            <div >
+                <div>
                     <img src={data.image} alt="" width="450px" height="400px" />
-                </Box>
-                <Box sx={{ overflow: "auto" }}>
+                </div>
+                <div className='proddiv'>
                     <h2>{data.title}</h2>
-                    <p sx={{ color: "#a1a1a1" }}>8GB+256GB</p>
-                    <Box sx={{ display: "flex", gap: "20px" }}>
+                    <p >8GB+256GB</p>
+                    <div className='proddiv1'>
                         <h6><CurrencyRupeeIcon sx={{ height: "15px" }} />{data.price}</h6>
                         <h6><del><CurrencyRupeeIcon sx={{ height: "15px" }} />{data.strike_off}</del></h6>
-                    </Box>
-                    <ul style={{ color: "grey", listStyleType: "square", lineHeight: "25px" }}>
+                    </div>
+                    <ul>
                         <li>10% Instant Discount up to ₹1,000 with HDFC & SBI cards</li>
                         <li>Use Code MBK250 | Flat Rs.250 Cashback on MobiKwik wallet</li>
                         <li>Get 3 months of Youtube Premium Membership Free</li>
                         <li>₹4,000 Exchange Bonus | Up to ₹16,500 off with Mi Exchange</li>
                         <li>Use Code MBK250 | Flat Rs.250 Cashback on MobiKwik wallet</li>
                     </ul>
-                    <Box>
-                        <ul style={{ color: "#ff6900", display: "flex", listStyleType: "square", flexWrap: "wrap", gap: "25px", marginTop: "25px" }}>
+                    <div>
+                        <ul className='proddiv2'>
                             <li>10 DAYS REPLACEMENT POLICY</li>
                             <li>COD</li>
                             <li>MI SCREEN PROTECT</li>
                             <li>COMPARE</li>
                         </ul>
-                    </Box>
-                    <Box sx={{ marginBottom: "25px" }}>
+                    </div>
+                    <div className='proddiv3'>
                         <h4>Quantity</h4>
-                        <Box sx={{ display: "flex", marginTop: "20px", marginBottom: "15px", gap: "10px" }}>
-                            <button onClick={handledecrement} disabled={quantity == 1 ? true : false} style={{ border: "1px solid white", height: "30px" }}>-</button>
-                            <button style={{ border: "1px solid white", height: "30px" }}>{quantity}</button>
-                            <button onClick={handleincrement} style={{ border: "1px solid white", height: "30px" }}>+</button>
-                        </Box>
-                    </Box>
-                    <Box>
-                        <Box sx={{ display: "flex", justifyContent: "space-between", width: "90%", margin: "auto", marginBottom: "20px",gap:"40px" }}>
+                        <div >
+                            <button onClick={handledecrement} disabled={quantity == 1 ? true : false} >-</button>
+                            <button >{quantity}</button>
+                            <button onClick={handleincrement} >+</button>
+                        </div>
+                    </div>
+                    <div className='proddiv4'>
+                        <div>
                             <p>{data.title}</p>
                             <p>{quantity} * {`${data.price}`}</p>
-                        </Box>
-                        <Box sx={{ display: "flex", justifyContent: "space-between", width: "90%", margin: "auto", marginBottom: "20px", color: "#ff6900" }}>
+                        </div>
+                        <div >
                             <h6>Total</h6>
                             <h5><CurrencyRupeeIcon sx={{ height: "18px" }} />{Number(`${data.price}`) * quantity}</h5>
-                        </Box>
-                    </Box>
-                    <button style={{ display: "block", color: "white", backgroundColor: "#191919", width: "75%", margin: "auto", justifyContent: "center", padding: "3px", borderRadius: "10px", marginBottom: "15px" }} onClick={handlebuy}>BUY NOW</button>
-                </Box>
-            </Box>
+                        </div>
+                    </div>
+                    <button onClick={handlebuy}>BUY NOW</button>
+                </div>
+            </div>
 
 
-            <Box>
+            <div>
                 {
                     choose.map((e) => (
                         <img src={e} alt="" style={{ width: "100%" }} />
                     ))
                 }
 
-            </Box>
-        </Box>
+            </div>
+        </div>
     )
 }
 

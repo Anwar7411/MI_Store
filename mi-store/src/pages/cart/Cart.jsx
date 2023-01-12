@@ -33,9 +33,9 @@ const Cart = () => {
     setTotal(totalprice)
   }, [cartitem])
   
-  if(!isAuth){
-  navigate("/login")
-  }
+  // if(!isAuth){
+  // navigate("/login")
+  // }
 
   const handleIncrement = (id) => {
     let setcart = []
@@ -74,10 +74,17 @@ const Cart = () => {
   }
 
   const handleCheckout = () => {
+    const date=new Date();
+   
+    cartitem?.forEach((el)=>{
+      el.user=userDetails._id;
+      el.date=date.toLocaleDateString()
+    })
+    console.log(cartitem)
     if (cartitem) {
       axios.post("http://localhost:8080/strip/create-checkout-session", {
         cartitem,
-        userId: "1213456789"
+        user: `${userDetails._id}`
       }).then((res) => {
         window.location.href = res.data.url
       })

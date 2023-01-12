@@ -5,6 +5,7 @@ import EachCard from '../../components/eachcard/EachCard';
 import {useDispatch,useSelector} from 'react-redux'
 import { getTvData } from '../../redux/appredux/Action';
 import { ThreeDots } from 'react-loader-spinner';
+import "../phone/Phones.css"
 
 const Tv = () => {
     const [data, setData] = useState([]);
@@ -33,7 +34,7 @@ const Tv = () => {
         setPage(value);
       };
       if(isLoading){
-        return <div style={{marginTop:"300px",marginLeft:"45%",marginBottom:"500px"}}>
+        return <div className='loader'>
       <ThreeDots 
                 height="100" 
                 width="100" 
@@ -48,7 +49,7 @@ const Tv = () => {
      }
      
     return (
-        <div style={{marginTop:"100px"}}>
+        <div className='phonediv'>
             <div >
                 <Box sx={{ minWidth: 120 }}>
                     <FormControl sx={{ width: "150px", margin: "15px 120px",border:"1px solid #ff6900" }}>
@@ -67,12 +68,12 @@ const Tv = () => {
                     </FormControl>
                 </Box>
             </div>
-            <div style={{ width: "95%", margin: "auto", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "20px", background: "#f7f7f7", marginTop: "20px" }}>
+            <div>
                 {data.length > 0 && data?.map((el) => (
                     <EachCard el={el} />
                 ))}
             </div>
-            <div style={{margin:"30px 200px 30px 600px"}}>
+            <div>
                 <Stack spacing={4}>
                     <Pagination count={count} page={page} onChange={handleChangepage} color="primary" />
                 </Stack>

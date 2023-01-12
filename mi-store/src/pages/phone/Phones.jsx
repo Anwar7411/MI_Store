@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
-import axios from "axios"
 import { Box, FormControl, InputLabel, MenuItem, Pagination, Select, Stack, Typography } from '@mui/material'
 import EachCard from '../../components/eachcard/EachCard'
-import {Link, useNavigate} from 'react-router-dom'
 import {useDispatch,useSelector} from 'react-redux'
 import { getPhonesData } from '../../redux/appredux/Action'
-import { RotatingSquare, ThreeDots } from 'react-loader-spinner'
+import { RotatingSquare} from 'react-loader-spinner'
+import './Phones.css'
 
 const Phones = () => {
     const [data, setData] = useState([]);
@@ -15,7 +14,6 @@ const Phones = () => {
     const [limit, setLimit] = useState(12);
     const [count,setCount]=useState(5);
     const dispatch=useDispatch();
-    const phones=useSelector((store)=>store.Appreducer.phones)
     const isLoading=useSelector((store)=>store.Appreducer.isLoading)
 
     useEffect(() => {
@@ -43,7 +41,7 @@ const Phones = () => {
       };
        
       if(isLoading){
-        return <div style={{marginTop:"300px",marginLeft:"45%",marginBottom:"500px"}}>
+        return <div className='loader'>
             <RotatingSquare
         height="100px"
         width="200px"
@@ -58,10 +56,10 @@ const Phones = () => {
      }
     
     return (
-        <div style={{marginTop:"100px"}}>
-            <div style={{ display: "flex" }}>
+        <div  className='phonediv'>
+            <div>
                 <Box sx={{ minWidth: 120 }}>
-                    <FormControl sx={{ width: "150px", margin: "15px 120px",border:"1px solid #ff6900" }}>
+                    <FormControl sx={{ width: "150px", margin: "15px 120px",border:"1px solid #ff6900" }} >
                         <InputLabel id="demo-simple-select-label">Brand</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
@@ -93,12 +91,12 @@ const Phones = () => {
                     </FormControl>
                 </Box>
             </div>
-            <div style={{ width: "95%", margin: "auto", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "20px", background: "#f7f7f7", marginTop: "20px" }}>
+            <div>
                 {data && data?.map((el) => (
                    <EachCard el={el} />
                 ))}
             </div>
-            <div style={{margin:"30px 200px 30px 600px"}}>
+            <div >
                 <Stack spacing={4}>
                     <Pagination count={count} page={page} onChange={handleChangepage} color="primary" />
                 </Stack>
