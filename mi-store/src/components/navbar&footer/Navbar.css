@@ -162,6 +162,7 @@ margin-top: 10px;
 }
 .search>div:nth-child(1){
    padding-top: 3px;
+   margin-left: 10px;
 }
 .searchbar{
    margin-right: 10px;
@@ -178,11 +179,11 @@ margin-top: 10px;
    z-index:99;
    background-color: #ffffff;
    color: black;
-   overflow-x: auto;
    border: 1px solid #ff6900;
 }
 .searchbar>div>div>div{
    cursor: pointer;
+   margin-top: 5px;
 }
 .searchbar>div>div>div:hover{
    color: #ff6900;

@@ -64,7 +64,7 @@ const handlesearch=(id)=>{
            {select ? 
            <div id="sugest">{
             suggestion.map((item)=>{
-                return <div onClick={()=>{console.log("item",item);handlesearch(item._id)}}>{item.title}</div>
+                return <div onClick={()=>handlesearch(item._id)}>{item.title}</div>
                 }) 
             }</div>
             : null }

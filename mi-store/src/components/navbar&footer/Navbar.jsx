@@ -1,20 +1,16 @@
 import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
-import { styled, alpha } from '@mui/material/styles';
-import InputBase from '@mui/material/InputBase';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonIcon from '@mui/icons-material/Person';
 import "./Navbar.css"
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom'
-import { Autocomplete, Input, TextField, Tooltip } from '@mui/material';
+import {  Tooltip } from '@mui/material';
 import { Box } from '@mui/system';
 import CurrencyRupee from '@mui/icons-material/CurrencyRupee';
 import { useSelector, useDispatch } from 'react-redux'
 import { Logout } from '../../redux/authredux/Action';
 import { getCartData } from '../../redux/appredux/Action';
-import { useState } from 'react';
-import { useThrottle } from 'use-throttle';
 import SearchBar from '../searchbar/SearchBar';
 
 const Navbar = () => {
