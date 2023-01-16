@@ -152,7 +152,41 @@ color: #ff6900;
 .signinpart>div{
 margin-top: 10px;
 }
-
+.search{
+   display: flex;
+    gap: 5px;
+    border:1px solid black; 
+}
+.search>div:nth-child(2){
+   width: 150px;
+}
+.search>div:nth-child(1){
+   padding-top: 3px;
+}
+.searchbar{
+   margin-right: 10px;
+}
+.searchbar input{
+   padding: 5px;
+   border:none;
+   width:150px;
+}
+.searchbar>div>div{
+   padding: 10px;
+   margin-top:10px;
+   position:absolute;
+   z-index:99;
+   background-color: #ffffff;
+   color: black;
+   overflow-x: auto;
+   border: 1px solid #ff6900;
+}
+.searchbar>div>div>div{
+   cursor: pointer;
+}
+.searchbar>div>div>div:hover{
+   color: #ff6900;
+}
  .footer{
     display: flex;
     background-color: #212121;

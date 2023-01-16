@@ -40,6 +40,7 @@ const SingleProductview = () => {
         async function fetch() {
             const phonedata = await axios.get(`http://localhost:8080/phones/single/${param.id}`).then((res) => res.data)
             const tvs = await axios.get(`http://localhost:8080/tv/single/${param.id}`).then((res) => res.data)
+            const laptops = await axios.get(`http://localhost:8080/laptop/single/${param.id}`).then((res) => res.data)
             if (phonedata) {
                 setData(phonedata);
                 setChoose(phone);
@@ -49,6 +50,11 @@ const SingleProductview = () => {
                 setData(tvs);
                 setChoose(tv);
                 setTotalprice(tvs.price)
+                setLoading(false)
+            }else if(laptops){
+                setData(laptops);
+                setChoose(laptop);
+                setTotalprice(laptops.price)
                 setLoading(false)
             }
         }

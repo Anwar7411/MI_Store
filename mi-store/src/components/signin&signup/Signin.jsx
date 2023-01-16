@@ -20,7 +20,9 @@ const Signin = () => {
   const[open2,setOpen2]=React.useState(false);
   const dispatch=useDispatch();
   const navigate=useNavigate();
-  const isAuth=useSelector((store)=>store.Authreducer.isAuth)
+  const isAuth=useSelector((store)=>store.Authreducer.isAuth);
+  const userDetails=useSelector((store)=>store.Authreducer.userDetails)
+  const token=useSelector((store)=>store.Authreducer.token)
   const isLoading=useSelector((store)=>store.Authreducer.isLoading)
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
@@ -56,14 +58,19 @@ const Signin = () => {
       password:values.password
     }
      if(payload.email && payload.password){
-      dispatch(Login(payload)).then(()=>{      
+      dispatch(Login(payload)).then((res)=>{      
           setOpen2(true)
       }).catch((err)=>{
         setOpen(true)
       })
+     }else{
+      
      }
   }
    if(isAuth){
+    localStorage.setItem("token",token);
+    localStorage.setItem("isAuth",true);
+    localStorage.setItem("userDetails",JSON.stringify(userDetails));
     setTimeout(()=>{
      navigate("/")
     },2000)

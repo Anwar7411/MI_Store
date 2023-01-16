@@ -6,6 +6,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MuiAlert from '@mui/material/Alert';
 import axios from 'axios';
 import { ProgressBar } from 'react-loader-spinner';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [values, setValues] = React.useState({
@@ -18,7 +19,8 @@ const Signup = () => {
   });
   const [open, setOpen] = React.useState(false);
   const[open2,setOpen2]=React.useState(false);
-  const[isLoading,setisLoadin]=useState(false)
+  const[isLoading,setisLoadin]=useState(false);
+  const navigate=useNavigate();
 
   const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -79,6 +81,7 @@ const Signup = () => {
           setOpen2(true);
         }else{
           setOpen(true)
+          
         }       
       }).catch((err)=>{
         setOpen(true)
@@ -95,6 +98,7 @@ const Signup = () => {
       })
     }else{
       setOpen(true)
+      setisLoadin(false)
     }
 
   }
@@ -186,14 +190,14 @@ const Signup = () => {
           </Button>
         </ThemeProvider>
         }
-        <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}   anchorOrigin={{ vertical:"top", horizontal:"center" }}>
+        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}   anchorOrigin={{ vertical:"top", horizontal:"center" }}>
         <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
            Signup Failed Please try again later!
         </Alert>
       </Snackbar>
-      <Snackbar open={open2} autoHideDuration={2000} onClose={handleClose}   anchorOrigin={{ vertical:"top", horizontal:"center" }}>
+      <Snackbar open={open2} autoHideDuration={3000} onClose={handleClose}   anchorOrigin={{ vertical:"top", horizontal:"center" }}>
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-           Signup Successfull Please Login
+           Signup Successfull Please Login!
         </Alert>
       </Snackbar>
       </div>

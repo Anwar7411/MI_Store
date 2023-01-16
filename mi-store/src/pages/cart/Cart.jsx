@@ -18,24 +18,26 @@ const Cart = () => {
   const [open,setOpen]=useState(false);
   const dispatch=useDispatch();
   const navigate=useNavigate();
-  const isAuth=useSelector((store)=>store.Authreducer.isAuth)
+  const [Auth,setAuth]=useState(false);
   const userDetails=useSelector((store)=>store.Authreducer.userDetails);
   useEffect(() => {
     let cart = JSON.parse(localStorage.getItem("cart"));
     setCartItem(cart);
+    let auth= JSON.parse(localStorage.getItem("isAuth"));
+    setAuth(auth)
   }, [])
 
   useEffect(() => {
     let totalprice = 0;
-    cartitem.forEach((el) => {
+    cartitem?.forEach((el) => {
       totalprice += (el.quantity * el.price)
     })
     setTotal(totalprice)
   }, [cartitem])
   
-  // if(!isAuth){
-  // navigate("/login")
-  // }
+  if(!Auth){
+  navigate("/login")
+  }
 
   const handleIncrement = (id) => {
     let setcart = []
@@ -78,13 +80,18 @@ const Cart = () => {
    
     cartitem?.forEach((el)=>{
       el.user=userDetails._id;
-      el.date=date.toLocaleDateString()
+      el.date=date.toLocaleDateString();
+      el._id=undefined;
     })
     console.log(cartitem)
     if (cartitem) {
-      axios.post("http://localhost:8080/strip/create-checkout-session", {
-        cartitem,
-        user: `${userDetails._id}`
+      axios({
+        method:"post",
+        url:"http://localhost:8080/strip/create-checkout-session",
+        data:cartitem,
+        headers:{
+          "Authorization" : `Bearer ${localStorage.getItem("token")}`
+      }
       }).then((res) => {
         window.location.href = res.data.url
       })
@@ -115,7 +122,7 @@ const Cart = () => {
           </tr>
         </thead>
         <tbody>
-          {cartitem.map((product, i) => (
+          {cartitem?.map((product, i) => (
             <tr className='tablerow'>
               <td><h6>{i + 1}</h6></td>
               <td>
@@ -146,7 +153,7 @@ const Cart = () => {
           <h4><CurrencyRupeeIcon />{total}</h4>
         </div>
         {buttonClick? <div><ProgressBar height="100" width="170" ariaLabel="progress-bar-loading" wrapperStyle={{}} wrapperClass="progress-bar-wrapper" borderColor = 'black' barColor = '#ff6700'/></div>
-                      :<button onClick={() => { setbuttonclick(true); handleCheckout() }}>Check Out ({cartitem.length})</button> }
+                      :<button onClick={() => { setbuttonclick(true); handleCheckout() }}>Check Out ({cartitem?.length})</button> }
           
       </div>
       <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}   anchorOrigin={{ vertical:"top", horizontal:"center" }}>

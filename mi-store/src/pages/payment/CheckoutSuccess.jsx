@@ -1,12 +1,16 @@
 import React ,{useState}from 'react'
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {useDispatch} from 'react-redux'
+import { getCartData } from '../../redux/appredux/Action';
 
 const CheckoutSuccess = () => {
   const navigate=useNavigate();
+  const dispatch=useDispatch();
   
     useEffect(()=>{
       localStorage.setItem("cart",JSON.stringify([]))
+      dispatch(getCartData())
     },[])
     setTimeout(()=>{
   navigate("/")

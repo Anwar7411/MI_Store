@@ -729,7 +729,109 @@
 
     "laptop":[
       {
-
+        "title": "Xiaomi Notebook Pro 120G",
+        "price": 69999,
+        "strike_off": 78999,
+        "category": "laptop",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1661833895.57191049.jpg?width=400&height=400",
+        "processor": "i5 12th Gen + UHD Graphics"
+      },
+      {
+        "title": "Mi NoteBook 14 e-Learning Edition",
+        "price": 36999,
+        "strike_off": 44999,
+        "category": "laptop",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1634122373.85025803.jpg?width=400&height=400",
+        "processor": "i3 10th Gen + UHD Graphics"
+      },
+      {
+        "title": "RedmiBook 15",
+        "price": 31999,
+        "strike_off": 51999,
+        "category": "laptop",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1647843772.91914821.png?width=400&height=400",
+        "processor": "i3 11th Gen + UHD Graphics"
+      },
+      {
+        "title": "Mi NoteBook Pro Lustrous Gray",
+        "price": 53999,
+        "strike_off": 69999,
+        "category": "laptop",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1648710116.97884839.jpg?width=400&height=400",
+        "processor": "i5 11th Gen + Iris Xe Graphics + MS Office 2021"
+      },
+      {
+        "title": "RedmiBook 15 Pro Charcoal Gray",
+        "price": 41999,
+        "strike_off": 59999,
+        "category": "laptop",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1648710745.33892812.jpg?width=400&height=400",
+        "processor": "i5 11th Gen + Iris Xe Graphics"
+      },
+      {
+        "title": "Mi NoteBook Ultra Lustrous Gray",
+        "price": 56999,
+        "strike_off": 71999,
+        "category": "laptop",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1648709644.10661363.jpg?width=400&height=400",
+        "processor": "i5 11th Gen + Iris Xe Graphics + MS Office 2021"
+      },
+      
+      {
+        "title": "Mi Notebook 14(IC) Silver",
+        "price": 39999,
+        "strike_off": 51999,
+        "category": "laptop",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1634122323.04637152.jpg?width=400&height=400",
+        "processor": "i5 10th Gen + UHD Graphics"
+      },
+      {
+        "title": "Mi Notebook 14 Horizon Gray",
+        "price": 49999,
+        "strike_off": 59999,
+        "category": "laptop",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1632911544.4955477.jpg?width=400&height=400",
+        "processor": "i5 10th Gen + Nvidia MX350"
+      },
+      {
+        "title": "Flip case for Redmi Pad",
+        "price": 1299,
+        "strike_off": 1999,
+        "category": "tablet",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1670565610.80535898.png?width=400&height=400",
+        "processor": "6GB+128GB"
+      },
+      {
+        "title": "Xiaomi Pad 5",
+        "price": 26499,
+        "strike_off": 37999,
+        "category": "tablet",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1650896467.04424744.jpg?width=400&height=400",
+        "processor": "6GB+128GB"
+      },
+      {
+        "title": "Redmi Pad",
+        "price": 14999,
+        "strike_off": 21999,
+        "category": "tablet",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1664774558.19975910.jpg?width=400&height=400",
+        "processor": "3GB+64GB"
+      },
+      {
+        "title": "Xiaomi Pad 5 Cover",
+        "price": 1999,
+        "strike_off": 2999,
+        "category": "tablet",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1651643041.75213958.jpg?width=400&height=400",
+        "processor": "3GB+64GB"
+      },
+      {
+        "title": "Xiaomi Smart Pen",
+        "price": 5999,
+        "strike_off": 7999,
+        "category": "tablet",
+        "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1651483231.16441309.jpg?width=400&height=400",
+        "processor": "3GB+64GB"
       }
     ]
 }

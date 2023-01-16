@@ -54,10 +54,15 @@ const getTvData=(quarayParams)=>(dispatch)=>{
 }
 
 const getLaptopData=(quarayParams)=>(dispatch)=>{
-
+    dispatch(getRequestData())
+   const {page,limit,category,sort}=quarayParams;
+  return axios.get(`http://localhost:8080/laptop?order=${sort}&filter=${category}&page=${page}&limit=${limit}`)
+   .then((res)=>dispatch( getLaptopDataSucess(res.data)))
+   .catch(()=>dispatch(getrequestFail()))
 }
 const getCartData=()=>(dispatch)=>{
    const cart=JSON.parse(localStorage.getItem("cart"));
   return dispatch(getCart(cart));
 }
+
  export {getLaptopData,getTvData,getPhonesData,getCartData}

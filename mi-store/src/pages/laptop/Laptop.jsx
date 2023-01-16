@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react'
 import { Box, FormControl, InputLabel, MenuItem, Pagination, Select, Stack, Typography } from '@mui/material'
 import EachCard from '../../components/eachcard/EachCard'
 import {useDispatch,useSelector} from 'react-redux'
-import { getPhonesData } from '../../redux/appredux/Action'
+import { getLaptopData } from '../../redux/appredux/Action'
 import { RotatingSquare} from 'react-loader-spinner'
-import './Phones.css'
+import '../phone/Phones.css'
 
-const Phones = () => {
+const Laptop = () => {
     const [data, setData] = useState([]);
-    const [brand, setBrand] = useState("");
+    const [category, setcategory] = useState("");
     const [sort, setSort] = useState("");
     const [page, setPage] = useState(1);
     const [limit, setLimit] = useState(12);
@@ -20,18 +20,19 @@ const Phones = () => {
         const quarayParams={
             page,
             sort,
-            brand,
+            category,
             limit
         }
-        dispatch(getPhonesData(quarayParams)).then((res)=>{
+        dispatch(getLaptopData(quarayParams)).then((res)=>{
+            console.log("payload",res.payload.data)
             setData(res.payload.data);
             setCount(Math.ceil(res.payload.count/limit))
         })
 
-    }, [sort, brand,page])
+    }, [sort, category,page])
 
     const handleChangedropdown1 = (event) => {
-        setBrand(event.target.value);
+        setcategory(event.target.value);
     };
     const handleChangedropdown2 = (event) => {
         setSort(event.target.value);
@@ -61,16 +62,16 @@ const Phones = () => {
             <div>
                 <Box sx={{ minWidth: 120 }}>
                     <FormControl sx={{ width: "150px", margin: "15px 120px",border:"1px solid #ff6900" }} >
-                        <InputLabel id="demo-simple-select-label">Brand</InputLabel>
+                        <InputLabel id="demo-simple-select-label">Category</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={brand}
-                            label="Brand"
+                            value={category}
+                            label="Category"
                             onChange={handleChangedropdown1}
                         >
-                            <MenuItem value="redmi">Redmi</MenuItem>
-                            <MenuItem value="xiaomi">Xiaomi</MenuItem>
+                            <MenuItem value="laptop">Laptop</MenuItem>
+                            <MenuItem value="tablet">Tablet</MenuItem>
                             <MenuItem value="">All</MenuItem>
                         </Select>
                     </FormControl>
@@ -107,4 +108,4 @@ const Phones = () => {
     )
 }
 
-export default Phones
+export default Laptop

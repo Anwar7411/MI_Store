@@ -32,7 +32,6 @@ const Login=(payload)=>(dispatch)=>{
         url:"http://localhost:8080/login",
         data:payload
       }).then((res)=>{
-        console.log("in action",res)
         const userloginn={
             token:res.data.token,
             userDetails:res.data.userDetails,

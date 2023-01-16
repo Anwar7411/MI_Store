@@ -2,6 +2,8 @@ import React from 'react'
 import { Route,Routes } from 'react-router-dom'
 import Cart from '../pages/cart/Cart'
 import Home from "../pages/home/Home"
+import Laptop from '../pages/laptop/Laptop'
+import PageNotFound from '../pages/pagenotfound/PageNotFound'
 import CheckoutFailure from '../pages/payment/CheckoutFailure'
 import CheckoutSuccess from '../pages/payment/CheckoutSuccess'
 import Phones from '../pages/phone/Phones'
@@ -15,11 +17,12 @@ const AllRoutes = () => {
         <Route path='/login' element={<SigninSignup />}></Route>
         <Route path='/phones' element={<Phones />}></Route>
         <Route path='/tvs' element={<Tv />}></Route>
+        <Route path='/laptop' element={<Laptop />}></Route>
         <Route path='/singleproduct/:id' element={<SingleProductview />}></Route>
         <Route path='/cart' element={<Cart />}></Route>
         <Route path='/paymentsuccess' element={<CheckoutSuccess />}></Route>
         <Route path='/paymentfail' element={<CheckoutFailure />}></Route>
-
+        <Route path='*' element={<PageNotFound />}></Route>
     </Routes>
   )
 }
