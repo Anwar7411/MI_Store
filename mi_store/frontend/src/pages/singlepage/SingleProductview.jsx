@@ -38,9 +38,9 @@ const SingleProductview = () => {
     useEffect(() => {
         fetch();
         async function fetch() {
-            const phonedata = await axios.get(`http://localhost:8080/phones/single/${param.id}`).then((res) => res.data)
-            const tvs = await axios.get(`http://localhost:8080/tv/single/${param.id}`).then((res) => res.data)
-            const laptops = await axios.get(`http://localhost:8080/laptop/single/${param.id}`).then((res) => res.data)
+            const phonedata = await axios.get(`https://mistore-backend.onrender.com/phones/single/${param.id}`).then((res) => res.data)
+            const tvs = await axios.get(`https://mistore-backend.onrender.com/tv/single/${param.id}`).then((res) => res.data)
+            const laptops = await axios.get(`https://mistore-backend.onrender.com/laptop/single/${param.id}`).then((res) => res.data)
             if (phonedata) {
                 setData(phonedata);
                 setChoose(phone);

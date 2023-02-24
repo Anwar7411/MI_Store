@@ -19,7 +19,7 @@ const SearchBar = () => {
   const throttleText=useThrottle(inputText,1000)
 
    useEffect(()=>{
-    axios.get("http://localhost:8080/search")
+    axios.get("https://mistore-backend.onrender.com/search")
     .then((res)=>{
        setData(res.data)
     }).catch((err)=>{

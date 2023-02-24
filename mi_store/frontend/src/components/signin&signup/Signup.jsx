@@ -74,7 +74,7 @@ const Signup = () => {
       }
       axios({
         method: "post",
-        url: "http://localhost:8080/signup",
+        url: "https://mistore-backend.onrender.com/signup",
         data: payload
       }).then((res) => {
         if(res.data=="Signup Successfull"){

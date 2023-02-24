@@ -39,7 +39,7 @@ const getrequestFail=()=>{
 const getPhonesData=(quarayParams)=>(dispatch)=>{
     dispatch(getRequestData())
    const {page,limit,brand,sort}=quarayParams;
-  return axios.get(`http://localhost:8080/phones?order=${sort}&filter=${brand}&page=${page}&limit=${limit}`)
+  return axios.get(`https://mistore-backend.onrender.com/phones?order=${sort}&filter=${brand}&page=${page}&limit=${limit}`)
    .then((res)=>dispatch(getPhonesDataSucess(res.data)))
    .catch(()=>dispatch(getrequestFail()))
      
@@ -48,7 +48,7 @@ const getPhonesData=(quarayParams)=>(dispatch)=>{
 const getTvData=(quarayParams)=>(dispatch)=>{
     dispatch(getRequestData())
    const {page,limit,sort}=quarayParams;
-  return axios.get(`http://localhost:8080/tv?order=${sort}&page=${page}&limit=${limit}`)
+  return axios.get(`https://mistore-backend.onrender.com/tv?order=${sort}&page=${page}&limit=${limit}`)
    .then((res)=>dispatch(getTvDataSucess(res.data)))
    .catch(()=>dispatch(getrequestFail()))
 }
@@ -56,7 +56,7 @@ const getTvData=(quarayParams)=>(dispatch)=>{
 const getLaptopData=(quarayParams)=>(dispatch)=>{
     dispatch(getRequestData())
    const {page,limit,category,sort}=quarayParams;
-  return axios.get(`http://localhost:8080/laptop?order=${sort}&filter=${category}&page=${page}&limit=${limit}`)
+  return axios.get(`https://mistore-backend.onrender.com/laptop?order=${sort}&filter=${category}&page=${page}&limit=${limit}`)
    .then((res)=>dispatch( getLaptopDataSucess(res.data)))
    .catch(()=>dispatch(getrequestFail()))
 }

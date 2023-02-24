@@ -19,7 +19,7 @@ const Navbar = () => {
   const carts = useSelector((store) => store.Appreducer.cart)
   const userDetails = useSelector((store) => store.Authreducer.userDetails);
   const location = useLocation();
-  let user = JSON.parse(localStorage.getItem("userDetails"));
+  let user={};
 
 
 
@@ -28,7 +28,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    user = JSON.parse(localStorage.getItem("userDetails"))
+    user = JSON.parse(localStorage.getItem("userDetails")) 
   }, [location])
 
 

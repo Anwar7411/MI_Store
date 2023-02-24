@@ -87,7 +87,7 @@ const Cart = () => {
     if (cartitem) {
       axios({
         method:"post",
-        url:"http://localhost:8080/strip/create-checkout-session",
+        url:"https://mistore-backend.onrender.com/strip/create-checkout-session",
         data:cartitem,
         headers:{
           "Authorization" : `Bearer ${localStorage.getItem("token")}`
